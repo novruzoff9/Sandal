@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Sandal.Controllers
+namespace PresentationLayer.Controllers
 {
     public class AboutController : Controller
     {

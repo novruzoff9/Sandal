@@ -1,4 +1,4 @@
-namespace Sandal
+namespace PresentationLayer
 {
     public class Program
     {

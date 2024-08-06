@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Sandal.Models;
+using PresentationLayer.Models;
 using System.Diagnostics;
 
-namespace Sandal.Controllers
+namespace PresentationLayer.Controllers
 {
     public class HomeController : Controller
     {

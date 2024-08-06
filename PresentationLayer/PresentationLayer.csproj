@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Category\" />
+    <Folder Include="wwwroot\Sandal\.git\objects\info\" />
+    <Folder Include="wwwroot\Sandal\.git\refs\tags\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Sandal\.DS_Store" />
+    <None Include="wwwroot\Sandal\.git\config" />
+    <None Include="wwwroot\Sandal\.git\description" />
+    <None Include="wwwroot\Sandal\.git\HEAD" />
+    <None Include="wwwroot\Sandal\.git\hooks\applypatch-msg.sample" />
+    <None Include="wwwroot\Sandal\.git\hooks\commit-msg.sample" />
+    <None Include="wwwroot\Sandal\.git\hooks\fsmonitor-watchman.sample" />
+    <None Include="wwwroot\Sandal\.git\hooks\post-update.sample" />
+    <None Include="wwwroot\Sandal\.git\hooks\pre-applypatch.sample" />
+    <None Include="wwwroot\Sandal\.git\hooks\pre-commit.sample" />
+    <None Include="wwwroot\Sandal\.git\hooks\pre-merge-commit.sample" />
+    <None Include="wwwroot\Sandal\.git\hooks\pre-push.sample" />
+    <None Include="wwwroot\Sandal\.git\hooks\pre-rebase.sample" />
+    <None Include="wwwroot\Sandal\.git\hooks\pre-receive.sample" />
+    <None Include="wwwroot\Sandal\.git\hooks\prepare-commit-msg.sample" />
+    <None Include="wwwroot\Sandal\.git\hooks\push-to-checkout.sample" />
+    <None Include="wwwroot\Sandal\.git\hooks\sendemail-validate.sample" />
+    <None Include="wwwroot\Sandal\.git\hooks\update.sample" />
+    <None Include="wwwroot\Sandal\.git\index" />
+    <None Include="wwwroot\Sandal\.git\info\exclude" />
+    <None Include="wwwroot\Sandal\.git\logs\HEAD" />
+    <None Include="wwwroot\Sandal\.git\logs\refs\heads\master" />
+    <None Include="wwwroot\Sandal\.git\logs\refs\remotes\origin\HEAD" />
+    <None Include="wwwroot\Sandal\.git\objects\pack\pack-c51b271852b338bba37b8e4072b7c81ec18c578f.idx" />
+    <None Include="wwwroot\Sandal\.git\objects\pack\pack-c51b271852b338bba37b8e4072b7c81ec18c578f.pack" />
+    <None Include="wwwroot\Sandal\.git\objects\pack\pack-c51b271852b338bba37b8e4072b7c81ec18c578f.rev" />
+    <None Include="wwwroot\Sandal\.git\packed-refs" />
+    <None Include="wwwroot\Sandal\.git\refs\heads\master" />
+    <None Include="wwwroot\Sandal\.git\refs\remotes\origin\HEAD" />
+    <None Include="wwwroot\Sandal\img\.DS_Store" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sandal\BusinessLayer\BusinessLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Home\Index.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

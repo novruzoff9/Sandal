@@ -1,4 +1,4 @@
-namespace Sandal.Models
+namespace PresentationLayer.Models
 {
     public class ErrorViewModel
     {
