@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete;
 
-public class Product
+public class Product : BaseEntity
 {
-    public int ProductID { get; set; }
     public string Name { get; set; } = null!;
     public decimal Price { get; set; }
     public decimal Rating { get; set; }
-
+    public int CategoryId { get; set; }
+    public Category? Category { get; set; }
 }

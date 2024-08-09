@@ -12,3 +12,4 @@ C:\Users\Novruzoff\source\repos\Sandal\EntityLayer\obj\Debug\net8.0\refint\Entit
 C:\Users\Novruzoff\source\repos\Sandal\EntityLayer\obj\Debug\net8.0\EntityLayer.pdb
 C:\Users\Novruzoff\source\repos\Sandal\EntityLayer\obj\Debug\net8.0\EntityLayer.genruntimeconfig.cache
 C:\Users\Novruzoff\source\repos\Sandal\EntityLayer\obj\Debug\net8.0\ref\EntityLayer.dll
+C:\Users\Novruzoff\source\repos\Sandal\EntityLayer\obj\Debug\net8.0\EntityLayer.sourcelink.json

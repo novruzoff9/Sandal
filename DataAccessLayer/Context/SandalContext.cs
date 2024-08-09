@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,19 +17,10 @@ public class SandalContext : DbContext
         optionsBuilder.UseSqlServer("Server=DESKTOP-ALE5B86;initial catalog=SandalDb;integrated security=true");
     }
     public DbSet<Category> Categories { get; set; }
-    public DbSet<SubCategory> SubCategories { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Category>(entity =>
-        {
-            entity.Property(e => e.Name).HasMaxLength(50);
-        });
-        modelBuilder.Entity<SubCategory>(entity =>
-        {
-            entity.HasOne(e => e.Category).WithMany(e => e.SubCategories)
-            .HasForeignKey(e => e.CategoryId)
-            .HasConstraintName("FK_SubCategories_Categories");
-        });
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        base.OnModelCreating(modelBuilder);
     }
 }

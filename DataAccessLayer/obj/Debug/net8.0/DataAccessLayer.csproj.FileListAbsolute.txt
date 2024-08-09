@@ -13,3 +13,4 @@ C:\Users\Novruzoff\source\repos\Sandal\DataAccessLayer\obj\Debug\net8.0\DataAcce
 C:\Users\Novruzoff\source\repos\Sandal\DataAccessLayer\obj\Debug\net8.0\refint\DataAccessLayer.dll
 C:\Users\Novruzoff\source\repos\Sandal\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.pdb
 C:\Users\Novruzoff\source\repos\Sandal\DataAccessLayer\obj\Debug\net8.0\ref\DataAccessLayer.dll
+C:\Users\Novruzoff\source\repos\Sandal\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.sourcelink.json

@@ -8,13 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.EntityFramework
+namespace DataAccessLayer.Concrete;
+
+public class UserRepository : GenericRepository<User>, IUserRepository
 {
-    public class EfCategoryDal : GenericRepository<Category>, ICategoryDal
+    public UserRepository(SandalContext context) : base(context)
     {
-        public EfCategoryDal(SandalContext context) : base(context)
-        {
-        }
     }
 }
+
 

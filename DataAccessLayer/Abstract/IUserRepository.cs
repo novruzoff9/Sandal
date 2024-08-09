@@ -5,10 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Abstract
+namespace DataAccessLayer.Abstract;
+
+public interface IUserRepository : IGenericRepository<User>
 {
-    public interface ICategoryDal : IGenericDal<Category>
-    {
-    }
 }
 
