@@ -14,5 +14,6 @@ public interface IGenericRepository<T> where T : BaseEntity
     void Delete(int id);
     void Delete(T entity);
     List<T> GetAll();
+    Task<List<T>> GetAllAsync();
     T GetById(int id);
 }

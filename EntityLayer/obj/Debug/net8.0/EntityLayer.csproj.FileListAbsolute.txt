@@ -7,9 +7,9 @@ C:\Users\Novruzoff\source\repos\Sandal\EntityLayer\obj\Debug\net8.0\EntityLayer.
 C:\Users\Novruzoff\source\repos\Sandal\EntityLayer\obj\Debug\net8.0\EntityLayer.AssemblyInfoInputs.cache
 C:\Users\Novruzoff\source\repos\Sandal\EntityLayer\obj\Debug\net8.0\EntityLayer.AssemblyInfo.cs
 C:\Users\Novruzoff\source\repos\Sandal\EntityLayer\obj\Debug\net8.0\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\Novruzoff\source\repos\Sandal\EntityLayer\obj\Debug\net8.0\EntityLayer.sourcelink.json
 C:\Users\Novruzoff\source\repos\Sandal\EntityLayer\obj\Debug\net8.0\EntityLayer.dll
 C:\Users\Novruzoff\source\repos\Sandal\EntityLayer\obj\Debug\net8.0\refint\EntityLayer.dll
 C:\Users\Novruzoff\source\repos\Sandal\EntityLayer\obj\Debug\net8.0\EntityLayer.pdb
 C:\Users\Novruzoff\source\repos\Sandal\EntityLayer\obj\Debug\net8.0\EntityLayer.genruntimeconfig.cache
 C:\Users\Novruzoff\source\repos\Sandal\EntityLayer\obj\Debug\net8.0\ref\EntityLayer.dll
-C:\Users\Novruzoff\source\repos\Sandal\EntityLayer\obj\Debug\net8.0\EntityLayer.sourcelink.json

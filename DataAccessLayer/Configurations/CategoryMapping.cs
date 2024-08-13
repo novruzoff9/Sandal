@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Configurationsl;
+namespace DataAccessLayer.Configurations;
 
 public class CategoryMapping : BaseEntityMapping<Category>
 {
@@ -20,7 +20,7 @@ public class CategoryMapping : BaseEntityMapping<Category>
         builder.HasOne(e => e.ParentCategory)
             .WithMany(e => e.SubCategories)
             .OnDelete(DeleteBehavior.Restrict)
-            .HasForeignKey(e => e.ParentCategory);
+            .HasForeignKey(e => e.ParentCategoryId);
 
         builder.HasMany(e => e.Products)
             .WithOne(e => e.Category)

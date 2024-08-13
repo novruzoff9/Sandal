@@ -14,5 +14,6 @@ public interface ICategoryService
     void DeleteCategory(Category entity);
     Category GetCategoryById(int id);
     List<Category> GetAllCategory();
+    Task<List<Category>> GetAllCategoryAsync();
 }
 

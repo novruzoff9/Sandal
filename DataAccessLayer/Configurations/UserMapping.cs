@@ -2,7 +2,7 @@
 using EntityLayer.Concrete;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace DataAccessLayer.Configurationsl;
+namespace DataAccessLayer.Configurations;
 
 public class UserMapping : BaseEntityMapping<User>
 {

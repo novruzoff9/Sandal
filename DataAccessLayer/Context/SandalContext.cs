@@ -12,11 +12,14 @@ namespace DataAccessLayer.Context;
 public class SandalContext : DbContext
 {
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public SandalContext(DbContextOptions<SandalContext> options)
+        : base(options)
     {
-        optionsBuilder.UseSqlServer("Server=DESKTOP-ALE5B86;initial catalog=SandalDb;integrated security=true");
     }
+
     public DbSet<Category> Categories { get; set; }
+    public DbSet<Product> Products { get; set; }
+    public DbSet<User> Users { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
