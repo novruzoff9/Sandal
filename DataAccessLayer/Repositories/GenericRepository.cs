@@ -1,5 +1,6 @@
 ﻿using DataAccessLayer.Abstract;
 using DataAccessLayer.Context;
+using EntityLayer.Base;
 using EntityLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -38,9 +39,9 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
         _context.SaveChanges();
     }
 
-    public List<T> GetAll()
+    public IEnumerable<T> GetAll()
     {
-        return _context.Set<T>().ToList();
+        return _context.Set<T>();
     }
 
     public async Task<List<T>> GetAllAsync()

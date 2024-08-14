@@ -33,6 +33,11 @@ public class UserService : IUserService
         return _UserRepository.GetAll().ToList();
     }
 
+    public async Task<List<User>> GetAllUserAsync()
+    {
+        return await _UserRepository.GetAllAsync();
+    }
+
     public User GetUserById(int id)
     {
         return _UserRepository.GetById(id);

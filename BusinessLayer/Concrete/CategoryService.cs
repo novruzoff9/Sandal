@@ -30,7 +30,7 @@ public class CategoryService : ICategoryService
 
     public List<Category> GetAllCategory()
     {
-        return _CategoryRepository.GetAll();
+        return _CategoryRepository.GetAll().ToList();
     }
 
     public async Task<List<Category>> GetAllCategoryAsync()

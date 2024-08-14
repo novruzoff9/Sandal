@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\Sandal\css\StyleSheet414818.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\Sandal\.git\objects\info\" />
     <Folder Include="wwwroot\Sandal\.git\refs\tags\" />
   </ItemGroup>
@@ -42,6 +46,9 @@
     <None Include="wwwroot\Sandal\.git\refs\heads\master" />
     <None Include="wwwroot\Sandal\.git\refs\remotes\origin\HEAD" />
     <None Include="wwwroot\Sandal\img\.DS_Store" />
+    <None Include="wwwroot\Sandal\plugins\sticky-sidebar\dist\sticky-sidebar.min.js" />
+    <None Include="wwwroot\Sandal\plugins\YTPlayer\dist\jquery.mb.YTPlayer.js" />
+    <None Include="wwwroot\Sandal\plugins\YTPlayer\dist\jquery.mb.YTPlayer.min.js" />
   </ItemGroup>
 
   <ItemGroup>

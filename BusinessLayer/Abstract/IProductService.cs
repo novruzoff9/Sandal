@@ -14,5 +14,6 @@ public interface IProductService
     void DeleteProduct(Product entity);
     Product GetProductById(int id);
     List<Product> GetAllProduct();
+    Task<List<Product>> GetAllProductAsync();
 }
 

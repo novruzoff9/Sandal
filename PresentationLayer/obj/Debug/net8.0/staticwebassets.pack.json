@@ -5,8 +5,8 @@
       "PackagePath": "staticwebassets\\PresentationLayer.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\css\\StyleSheet15948.css",
-      "PackagePath": "staticwebassets\\Sandal\\css\\StyleSheet15948.css"
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\css\\StyleSheet414818.css",
+      "PackagePath": "staticwebassets\\Sandal\\css\\StyleSheet414818.css"
     },
     {
       "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\css\\autopart.css",
@@ -3393,6 +3393,50 @@
       "PackagePath": "staticwebassets\\Sandal\\plugins\\OwlCarousel2-2.3.4\\test\\unit\\core.js"
     },
     {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\plugins\\YTPlayer\\dist\\css\\font\\ytp-regular.eot",
+      "PackagePath": "staticwebassets\\Sandal\\plugins\\YTPlayer\\dist\\css\\font\\ytp-regular.eot"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\plugins\\YTPlayer\\dist\\css\\font\\ytp-regular.ttf",
+      "PackagePath": "staticwebassets\\Sandal\\plugins\\YTPlayer\\dist\\css\\font\\ytp-regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\plugins\\YTPlayer\\dist\\css\\font\\ytp-regular.woff",
+      "PackagePath": "staticwebassets\\Sandal\\plugins\\YTPlayer\\dist\\css\\font\\ytp-regular.woff"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\plugins\\YTPlayer\\dist\\css\\images\\raster.png",
+      "PackagePath": "staticwebassets\\Sandal\\plugins\\YTPlayer\\dist\\css\\images\\raster.png"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\plugins\\YTPlayer\\dist\\css\\images\\raster@2x.png",
+      "PackagePath": "staticwebassets\\Sandal\\plugins\\YTPlayer\\dist\\css\\images\\raster@2x.png"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\plugins\\YTPlayer\\dist\\css\\images\\raster_dot.png",
+      "PackagePath": "staticwebassets\\Sandal\\plugins\\YTPlayer\\dist\\css\\images\\raster_dot.png"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\plugins\\YTPlayer\\dist\\css\\images\\raster_dot@2x.png",
+      "PackagePath": "staticwebassets\\Sandal\\plugins\\YTPlayer\\dist\\css\\images\\raster_dot@2x.png"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\plugins\\YTPlayer\\dist\\css\\jquery.mb.YTPlayer.min.css",
+      "PackagePath": "staticwebassets\\Sandal\\plugins\\YTPlayer\\dist\\css\\jquery.mb.YTPlayer.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\plugins\\YTPlayer\\dist\\index.html",
+      "PackagePath": "staticwebassets\\Sandal\\plugins\\YTPlayer\\dist\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\plugins\\YTPlayer\\dist\\jquery.mb.YTPlayer.js",
+      "PackagePath": "staticwebassets\\Sandal\\plugins\\YTPlayer\\dist\\jquery.mb.YTPlayer.js"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\plugins\\YTPlayer\\dist\\jquery.mb.YTPlayer.min.js",
+      "PackagePath": "staticwebassets\\Sandal\\plugins\\YTPlayer\\dist\\jquery.mb.YTPlayer.min.js"
+    },
+    {
       "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\plugins\\bootstrap\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\Sandal\\plugins\\bootstrap\\css\\bootstrap-grid.css"
     },
@@ -3875,6 +3919,10 @@
     {
       "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\plugins\\slick\\slick\\slick.min.js",
       "PackagePath": "staticwebassets\\Sandal\\plugins\\slick\\slick\\slick.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\plugins\\sticky-sidebar\\dist\\sticky-sidebar.min.js",
+      "PackagePath": "staticwebassets\\Sandal\\plugins\\sticky-sidebar\\dist\\sticky-sidebar.min.js"
     },
     {
       "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\css\\Admin\\AdminPanel.css",

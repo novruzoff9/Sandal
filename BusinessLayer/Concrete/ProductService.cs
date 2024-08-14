@@ -33,6 +33,11 @@ public class ProductService : IProductService
         return _ProductRepository.GetAll().ToList();
     }
 
+    public async Task<List<Product>> GetAllProductAsync()
+    {
+        return await _ProductRepository.GetAllAsync();
+    }
+
     public Product GetProductById(int id)
     {
         return _ProductRepository.GetById(id);

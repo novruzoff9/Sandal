@@ -14,5 +14,6 @@ public interface IUserService
     void DeleteUser(User entity);
     User GetUserById(int id);
     List<User> GetAllUser();
+    Task<List<User>> GetAllUserAsync();
 }
 

@@ -1,4 +1,5 @@
-﻿using EntityLayer.Concrete;
+﻿using EntityLayer.Base;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ public interface IGenericRepository<T> where T : BaseEntity
     void Update(T entity);
     void Delete(int id);
     void Delete(T entity);
-    List<T> GetAll();
+    IEnumerable<T> GetAll();
     Task<List<T>> GetAllAsync();
     T GetById(int id);
 }

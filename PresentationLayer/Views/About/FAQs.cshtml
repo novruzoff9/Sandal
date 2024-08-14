@@ -1,0 +1,55 @@
+﻿@using EntityLayer.Concrete
+@using EntityLayer.Enums
+@model List<FAQ>
+@{
+    FAQ lastFaq = new();
+}
+<div class="ps-page--single">
+    <div class="ps-breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="index.html">Əsas</a></li>
+                <li>Tez-tez soruşulan suallar</li>
+            </ul>
+        </div>
+    </div>
+    <div class="ps-faqs">
+        <div class="container">
+            <div class="ps-section__header">
+                <h1>Tez-tez soruşulan suallar</h1>
+            </div>
+            <div class="ps-section__content">
+                <div class="table-responsive">
+                    <table class="table ps-table--faqs">
+                        <tbody>
+                            @foreach (var FAQ in Model)
+                            {
+                                <tr>
+                                    @if(FAQ == Model.First() || FAQ.Category != lastFaq.Category)
+                                    {
+                                        <td class="heading">
+                                            <h4>@FAQ.Category</h4>
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td></td>
+                                    }
+                                    <td class="question">@FAQ.Question</td>
+                                    <td>@FAQ.Answer</td>
+                                </tr>
+                                lastFaq = FAQ;
+                            }
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ps-call-to-action">
+        <div class="container">
+            <h3>We’re Here to Help !<a href="#"> Contact us</a></h3>
+        </div>
+    </div>
+</div>

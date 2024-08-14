@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace PresentationLayer.ViewComponents;
+namespace PresentationLayer.ViewComponents.Layout;
 
 public class CatalogViewComponent : ViewComponent
 {
@@ -13,9 +13,9 @@ public class CatalogViewComponent : ViewComponent
         _categoryService = categoryService;
     }
 
-    public async Task<IViewComponentResult> InvokeAsync()
+    public IViewComponentResult Invoke()
     {
-        var categories = await _categoryService.GetAllCategoryAsync();
+        var categories = _categoryService.GetAllCategory();
         return View(categories);
     }
 }
