@@ -11,11 +11,26 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="wwwroot\admin\assets\img\" />
     <Folder Include="wwwroot\Sandal\.git\objects\info\" />
     <Folder Include="wwwroot\Sandal\.git\refs\tags\" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\admin\assets\css\sass\AdminPanel.css.map" />
+    <None Include="wwwroot\admin\assets\css\sass\AdminPanel.scss" />
+    <None Include="wwwroot\admin\assets\css\sass\dashboard.css.map" />
+    <None Include="wwwroot\admin\assets\css\sass\dashboard.scss" />
+    <None Include="wwwroot\admin\assets\css\sass\partials\sections\_aside.scss" />
+    <None Include="wwwroot\admin\assets\css\sass\partials\sections\_content.scss" />
+    <None Include="wwwroot\admin\assets\css\sass\partials\sections\_header.scss" />
+    <None Include="wwwroot\admin\assets\css\sass\partials\_basics.scss" />
+    <None Include="wwwroot\admin\assets\css\sass\partials\_variables.scss" />
+    <None Include="wwwroot\admin\assets\js\Layout.js" />
+    <None Include="wwwroot\admin\assets\js\Scroll.js" />
+    <None Include="wwwroot\admin\assets\js\Slider.js" />
     <None Include="wwwroot\Sandal\.DS_Store" />
     <None Include="wwwroot\Sandal\.git\config" />
     <None Include="wwwroot\Sandal\.git\description" />
@@ -52,11 +67,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.7">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.4" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,0 +1,27 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background-color: $light-grey !important;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 50px 0;
+  @include section-padding(20px);
+  h2{
+    margin: 50px auto;
+    color: #030303;
+  }
+  h2.header-title {
+    margin: 50px auto 10px auto;
+    color: #030303;
+  }
+  h5{
+    margin: 0 auto 40px auto;
+    color: #62717c;
+  }
+}

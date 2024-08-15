@@ -517,3 +517,8 @@ C:\Users\Novruzoff\source\repos\Sandal\PresentationLayer\obj\Debug\net8.0\refint
 C:\Users\Novruzoff\source\repos\Sandal\PresentationLayer\obj\Debug\net8.0\PresentationLayer.pdb
 C:\Users\Novruzoff\source\repos\Sandal\PresentationLayer\obj\Debug\net8.0\PresentationLayer.genruntimeconfig.cache
 C:\Users\Novruzoff\source\repos\Sandal\PresentationLayer\obj\Debug\net8.0\ref\PresentationLayer.dll
+C:\Users\Novruzoff\source\repos\Sandal\PresentationLayer\bin\Debug\net8.0\EntityFramework.SqlServer.dll
+C:\Users\Novruzoff\source\repos\Sandal\PresentationLayer\bin\Debug\net8.0\EntityFramework.dll
+C:\Users\Novruzoff\source\repos\Sandal\PresentationLayer\bin\Debug\net8.0\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Novruzoff\source\repos\Sandal\PresentationLayer\bin\Debug\net8.0\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Novruzoff\source\repos\Sandal\PresentationLayer\obj\Debug\net8.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css

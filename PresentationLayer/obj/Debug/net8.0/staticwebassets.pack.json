@@ -3925,6 +3925,66 @@
       "PackagePath": "staticwebassets\\Sandal\\plugins\\sticky-sidebar\\dist\\sticky-sidebar.min.js"
     },
     {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\admin\\assets\\css\\sass\\AdminPanel.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\sass\\AdminPanel.css"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\admin\\assets\\css\\sass\\AdminPanel.css.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\sass\\AdminPanel.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\admin\\assets\\css\\sass\\AdminPanel.scss",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\sass\\AdminPanel.scss"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\admin\\assets\\css\\sass\\dashboard.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\sass\\dashboard.css"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\admin\\assets\\css\\sass\\dashboard.css.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\sass\\dashboard.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\admin\\assets\\css\\sass\\dashboard.scss",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\sass\\dashboard.scss"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\admin\\assets\\css\\sass\\partials\\_basics.scss",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\sass\\partials\\_basics.scss"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\admin\\assets\\css\\sass\\partials\\_variables.scss",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\sass\\partials\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\admin\\assets\\css\\sass\\partials\\sections\\_aside.scss",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\sass\\partials\\sections\\_aside.scss"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\admin\\assets\\css\\sass\\partials\\sections\\_content.scss",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\sass\\partials\\sections\\_content.scss"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\admin\\assets\\css\\sass\\partials\\sections\\_header.scss",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\sass\\partials\\sections\\_header.scss"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\admin\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\admin\\assets\\js\\Layout.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\Layout.js"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\admin\\assets\\js\\Scroll.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\Scroll.js"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\admin\\assets\\js\\Slider.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\Slider.js"
+    },
+    {
       "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\css\\Admin\\AdminPanel.css",
       "PackagePath": "staticwebassets\\css\\Admin\\AdminPanel.css"
     },
