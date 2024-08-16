@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yagmurgn\\Desktop\\Sandal\\PresentationLayer\\PresentationLayer.csproj": {}
+    "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\PresentationLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yagmurgn\\Desktop\\Sandal\\BusinessLayer\\BusinessLayer.csproj": {
+    "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yagmurgn\\Desktop\\Sandal\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\yagmurgn\\Desktop\\Sandal\\BusinessLayer\\BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\yagmurgn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yagmurgn\\Desktop\\Sandal\\BusinessLayer\\obj\\",
+        "projectPath": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\Novruzoff\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\yagmurgn\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Novruzoff\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,15 +23,14 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "C:\\Users\\yagmurgn\\Desktop\\CodeAcademyLab\\AdoNetApp\\AdoGenericService\\bin\\Debug": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\yagmurgn\\Desktop\\Sandal\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\yagmurgn\\Desktop\\Sandal\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\DataAccessLayer\\DataAccessLayer.csproj"
               }
             }
           }
@@ -70,25 +65,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\yagmurgn\\Desktop\\Sandal\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yagmurgn\\Desktop\\Sandal\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\yagmurgn\\Desktop\\Sandal\\DataAccessLayer\\DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\yagmurgn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yagmurgn\\Desktop\\Sandal\\DataAccessLayer\\obj\\",
+        "projectPath": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\Novruzoff\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\yagmurgn\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Novruzoff\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -97,15 +88,14 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "C:\\Users\\yagmurgn\\Desktop\\CodeAcademyLab\\AdoNetApp\\AdoGenericService\\bin\\Debug": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\yagmurgn\\Desktop\\Sandal\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\yagmurgn\\Desktop\\Sandal\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -140,25 +130,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\yagmurgn\\Desktop\\Sandal\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yagmurgn\\Desktop\\Sandal\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\yagmurgn\\Desktop\\Sandal\\EntityLayer\\EntityLayer.csproj",
-        "packagesPath": "C:\\Users\\yagmurgn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yagmurgn\\Desktop\\Sandal\\EntityLayer\\obj\\",
+        "projectPath": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\EntityLayer\\EntityLayer.csproj",
+        "packagesPath": "C:\\Users\\Novruzoff\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\yagmurgn\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Novruzoff\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -167,7 +153,6 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "C:\\Users\\yagmurgn\\Desktop\\CodeAcademyLab\\AdoNetApp\\AdoGenericService\\bin\\Debug": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -240,25 +225,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\yagmurgn\\Desktop\\Sandal\\PresentationLayer\\PresentationLayer.csproj": {
+    "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\PresentationLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yagmurgn\\Desktop\\Sandal\\PresentationLayer\\PresentationLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\PresentationLayer.csproj",
         "projectName": "PresentationLayer",
-        "projectPath": "C:\\Users\\yagmurgn\\Desktop\\Sandal\\PresentationLayer\\PresentationLayer.csproj",
-        "packagesPath": "C:\\Users\\yagmurgn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yagmurgn\\Desktop\\Sandal\\PresentationLayer\\obj\\",
+        "projectPath": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\PresentationLayer.csproj",
+        "packagesPath": "C:\\Users\\Novruzoff\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\yagmurgn\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Novruzoff\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -267,15 +248,14 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "C:\\Users\\yagmurgn\\Desktop\\CodeAcademyLab\\AdoNetApp\\AdoGenericService\\bin\\Debug": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\yagmurgn\\Desktop\\Sandal\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "C:\\Users\\yagmurgn\\Desktop\\Sandal\\BusinessLayer\\BusinessLayer.csproj"
+              "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\BusinessLayer\\BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\BusinessLayer\\BusinessLayer.csproj"
               }
             }
           }
@@ -296,6 +276,12 @@
           "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
@@ -325,7 +311,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

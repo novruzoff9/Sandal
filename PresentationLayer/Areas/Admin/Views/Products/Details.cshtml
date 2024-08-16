@@ -1,0 +1,42 @@
+﻿@model EntityLayer.Concrete.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd class = "col-sm-10">
+            <a asp-controller="categories" asp-action="details" asp-route-id="@Model.CategoryId">@Model.Category.Name</a>
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-warning" asp-action="edit" asp-route-id="@Model?.Id">Düzəliş et</a>
+    <a class="btn btn-primary" asp-action="index">Siyahı</a>
+</div>

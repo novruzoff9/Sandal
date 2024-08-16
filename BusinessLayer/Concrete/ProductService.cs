@@ -38,9 +38,19 @@ public class ProductService : IProductService
         return await _ProductRepository.GetAllAsync();
     }
 
+    public List<Product> GetAllWithRelations()
+    {
+        return _ProductRepository.GetAllWithRelations(false, "Category").ToList();
+    }
+
     public Product GetProductById(int id)
     {
         return _ProductRepository.GetById(id);
+    }
+
+    public Product GetProductWithRelations(int id)
+    {
+        return _ProductRepository.GetEntityWithRelations(id, false, "Category");
     }
 
     public void UpdateProduct(Product entity)

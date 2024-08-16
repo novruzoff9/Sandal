@@ -15,5 +15,8 @@ public interface IProductService
     Product GetProductById(int id);
     List<Product> GetAllProduct();
     Task<List<Product>> GetAllProductAsync();
+
+    List<Product> GetAllWithRelations();
+    Product GetProductWithRelations(int id);
 }
 

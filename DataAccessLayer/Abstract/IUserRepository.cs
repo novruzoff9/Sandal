@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Abstract;
 
-public interface IUserRepository : IGenericRepository<User>
+/*public interface IUserRepository : IGenericRepository<User>
 {
-}
-
+}*/

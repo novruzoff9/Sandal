@@ -49,6 +49,7 @@ for file in "$Models_folder_path"/*; do
 
     new_crud_interface="I${class_name}Repository.cs"
 
+if [ ! -d "$DAL_Interface_folder_path/$new_crud_interface" ]; then
     # Hemin class-dan Abstract Interface yaratmaq
     touch "$DAL_Interface_folder_path/$new_crud_interface"
 
@@ -68,9 +69,16 @@ public interface I${class_name}Repository : IGenericRepository<${class_name}>
 }
 
 EOL
+else
+    echo "Salam"
+fi
+
+    
 
     new_dal_concrete_class="${class_name}Repository.cs"
 
+
+if [ ! -d "$DAL_concrete_folder_path/$new_dal_concrete_class" ]; then
     # Hemin class-dan entityframework class yaratmaq
     touch "$DAL_concrete_folder_path/$new_dal_concrete_class"
 
@@ -97,6 +105,11 @@ public class ${class_name}Repository : GenericRepository<${class_name}>, I${clas
 
 
 EOL
+else
+    echo "Salam"
+fi
+
+    
 
     echo "Created file at Data Access Layer: $DAL_Interface_folder_path/$new_crud_interface"
     echo "Created file at Data Access Layer: $DAL_concrete_folder_path/$new_dal_concrete_class"
@@ -105,6 +118,7 @@ EOL
 
     new_service_interface="I${class_name}Service.cs"
 
+if [ ! -d "$BL_Interface_folder_path/$new_service_interface" ]; then
     # Hemin class-dan Abstract Interface yaratmaq
     touch "$BL_Interface_folder_path/$new_service_interface"
 
@@ -130,10 +144,17 @@ public interface I${class_name}Service
 }
 
 EOL
+else
+    echo "Busines Layer concrete qovluq mövcud -> $BL_concrete_folder_path"
+fi
+
+
+    
 
     new_bl_concrete_class="${class_name}Service.cs"
 
-    # Hemin class-dan entityframework class yaratmaq
+if [ ! -d "$BL_concrete_folder_path" ]; then
+     # Hemin class-dan entityframework class yaratmaq
     touch "$BL_concrete_folder_path/$new_bl_concrete_class"
 
     # EntityFramework Class-in icini doldurmaq
@@ -191,6 +212,11 @@ public class ${class_name}Service : I${class_name}Service
 
 
 EOL
+else
+    echo "Busines Layer concrete qovluq mövcud -> $BL_concrete_folder_path"
+fi
+
+   
 
     echo "Created file at Business Layer: $BL_Interface_folder_path/$new_service_interface"
     echo "Created file at Business Layer: $BL_concrete_folder_path/$new_bl_concrete_class"

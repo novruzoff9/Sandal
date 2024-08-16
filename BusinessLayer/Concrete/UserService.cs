@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete;
 
-public class UserService : IUserService
+/*public class UserService : IUserService
 {
     private readonly IUserRepository _UserRepository;
 
@@ -49,4 +49,4 @@ public class UserService : IUserService
     }
 }
 
-
+*/

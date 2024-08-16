@@ -15,7 +15,7 @@ public class ProductMapping : BaseEntityMapping<Product>
             .HasColumnType("decimal(18,2)");
 
         builder.Property(e => e.Rating)
-            .HasColumnType("decimal(2,2)");
+            .HasColumnType("decimal(18,2)");
 
         builder.HasOne(e => e.Category)
             .WithMany(e => e.Products)
