@@ -1,11 +1,6 @@
 using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete;
 
@@ -41,6 +36,17 @@ public class CategoryService : ICategoryService
     public Category GetCategoryById(int id)
     {
         return _CategoryRepository.GetById(id);
+    }
+
+    public Category GetCategoryWithRelations(int id)
+    {
+        var category = _CategoryRepository.GetEntityWithRelations(id, false, "ParentCategory", "SubCategories", "Products");
+        return category;
+    }
+
+    public List<Category> GetParentCategories()
+    {
+        return _CategoryRepository.ListByFilter(x => x.ParentCategoryId == null).ToList();
     }
 
     public void UpdateCategory(Category entity)

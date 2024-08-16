@@ -1,0 +1,38 @@
+﻿@model Category
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Kateqoriyanı sil</h2>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ParentCategory)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ParentCategory.Name)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <button class="btn btn-danger" type="submit">
+            <i class="fas fa-trash"></i>&nbsp;&nbsp;Sil
+        </button>
+        <a class="btn btn-primary" asp-action="Index"><i class="fas fa-times"></i>&nbsp;&nbsp;İmtina</a>
+    </form>
+</div>

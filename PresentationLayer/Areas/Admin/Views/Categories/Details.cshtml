@@ -1,0 +1,48 @@
+﻿@model Category
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Ətraflı</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ParentCategory)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ParentCategory.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SubCategories)
+        </dt>
+        <dd class="col-sm-10">
+            @{
+                string subcategories = "";
+                foreach (var item in Model.SubCategories)
+                {
+                    subcategories += item.Name + ", ";
+                }
+            }
+            <p>@subcategories</p>
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@Model?.Id">Düzəliş et</a> 
+    <a class="btn btn-primary" asp-action="Index">Siyahı</a>
+</div>

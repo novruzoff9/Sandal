@@ -17,87 +17,99 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PresentationLayer
 build_property.RootNamespace = PresentationLayer
-build_property.ProjectDir = C:\Users\Novruzoff\source\repos\Sandal\PresentationLayer\
+build_property.ProjectDir = C:\Users\yagmurgn\Desktop\Sandal\PresentationLayer\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Novruzoff\source\repos\Sandal\PresentationLayer
+build_property.MSBuildProjectDirectory = C:\Users\yagmurgn\Desktop\Sandal\PresentationLayer
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Areas/Admin/Views/Categories/Create.cshtml]
+[C:/Users/yagmurgn/Desktop/Sandal/PresentationLayer/Areas/Admin/Views/Categories/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Areas/Admin/Views/Categories/Index.cshtml]
+[C:/Users/yagmurgn/Desktop/Sandal/PresentationLayer/Areas/Admin/Views/Categories/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yagmurgn/Desktop/Sandal/PresentationLayer/Areas/Admin/Views/Categories/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yagmurgn/Desktop/Sandal/PresentationLayer/Areas/Admin/Views/Categories/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yagmurgn/Desktop/Sandal/PresentationLayer/Areas/Admin/Views/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Areas/Admin/Views/Shared/Error.cshtml]
+[C:/Users/yagmurgn/Desktop/Sandal/PresentationLayer/Areas/Admin/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/yagmurgn/Desktop/Sandal/PresentationLayer/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/Users/yagmurgn/Desktop/Sandal/PresentationLayer/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Areas/Admin/Views/_ViewStart.cshtml]
+[C:/Users/yagmurgn/Desktop/Sandal/PresentationLayer/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Views/About/FAQs.cshtml]
+[C:/Users/yagmurgn/Desktop/Sandal/PresentationLayer/Views/About/FAQs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcRkFRcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Views/About/Index.cshtml]
+[C:/Users/yagmurgn/Desktop/Sandal/PresentationLayer/Views/About/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Views/Contact/Index.cshtml]
+[C:/Users/yagmurgn/Desktop/Sandal/PresentationLayer/Views/Contact/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Views/Home/Index.cshtml]
+[C:/Users/yagmurgn/Desktop/Sandal/PresentationLayer/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Views/Home/Privacy.cshtml]
+[C:/Users/yagmurgn/Desktop/Sandal/PresentationLayer/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Views/Shared/Components/Catalog/Default.cshtml]
+[C:/Users/yagmurgn/Desktop/Sandal/PresentationLayer/Views/Shared/Components/Catalog/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2F0YWxvZ1xEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Views/Shared/Components/Footer/Default.cshtml]
+[C:/Users/yagmurgn/Desktop/Sandal/PresentationLayer/Views/Shared/Components/Footer/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRm9vdGVyXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Views/Shared/Error.cshtml]
+[C:/Users/yagmurgn/Desktop/Sandal/PresentationLayer/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/yagmurgn/Desktop/Sandal/PresentationLayer/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Views/_ViewImports.cshtml]
+[C:/Users/yagmurgn/Desktop/Sandal/PresentationLayer/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Views/_ViewStart.cshtml]
+[C:/Users/yagmurgn/Desktop/Sandal/PresentationLayer/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Areas/Admin/Views/Shared/_Layout.cshtml]
+[C:/Users/yagmurgn/Desktop/Sandal/PresentationLayer/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-yya7p4hp6p
 
-[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Views/Shared/_Layout.cshtml]
+[C:/Users/yagmurgn/Desktop/Sandal/PresentationLayer/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-xphr5dixgj

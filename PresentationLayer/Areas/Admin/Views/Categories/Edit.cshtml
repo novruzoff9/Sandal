@@ -1,0 +1,46 @@
+﻿@model Category
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Kateqoriyanı yenilə</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="ParentCategoryId" class="control-label"></label>
+                <select asp-for="ParentCategoryId" class="form-control" asp-items="ViewBag.ParentCategoryId">
+                    <option value="">Üst kateqoriyanı seçin</option>
+                </select>
+                <span asp-validation-for="ParentCategoryId" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group d-flex flex-row justify-content-between w-100">
+                <button class="btn btn-success" type="submit">
+                    <i class="fas fa-save"></i>&nbsp;&nbsp;Təsdiq
+                </button>
+                <a class="btn btn-danger" asp-action="Index"><i class="fas fa-trash"></i>&nbsp;&nbsp;İmtina</a>
+            </div>
+        </form>
+    </div>
+</div>
+
