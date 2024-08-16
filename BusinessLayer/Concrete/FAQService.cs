@@ -30,7 +30,7 @@ public class FAQService : IFAQService
 
     public List<FAQ> GetAllFAQ()
     {
-        return _FAQRepository.GetAll().OrderBy(x=>x.Category).ToList();
+        return _FAQRepository.GetAll().ToList();
     }
 
     public async Task<List<FAQ>> GetAllFAQAsync()
