@@ -1,93 +1,129 @@
-﻿using EntityLayer.Concrete;
+﻿using AutoMapper;
+using EntityLayer.Concrete;
+using EntityLayer.DTOs.User;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace PresentationLayer.Areas.Admin.Controllers
+namespace PresentationLayer.Areas.Admin.Controllers;
+
+[Area("Admin")]
+public class UsersController : Controller
 {
-    public class UsersController : Controller
+    private readonly UserManager<User> _userManager;
+    private readonly RoleManager<Role> _roleManager;
+    private readonly IMapper _mapper;
+
+    public UsersController(UserManager<User> userManager, RoleManager<Role> roleManager, IMapper mapper)
     {
-        private readonly UserManager<User> _userManager;
-        private readonly RoleManager<Role> _roleManager;
+        _userManager = userManager;
+        _roleManager = roleManager;
+        _mapper = mapper;
+    }
 
-        public UsersController(UserManager<User> userManager)
+    public async Task<IActionResult> Index()
+    {
+        var allusers = _userManager.Users.ToList();
+        var userlist = new List<UserListDto>();
+        foreach (var item in allusers)
         {
-            _userManager = userManager;
+            UserListDto userlistDto = _mapper.Map<UserListDto>(item);
+            userlistDto.Roles = string.Join(",", _userManager.GetRolesAsync(item).Result.ToArray());
+            userlist.Add(userlistDto);
         }
+        return View(userlist);
+    }
 
-        public IActionResult Index()
+    public async Task<IActionResult> Details(string id)
+    {
+        if (string.IsNullOrWhiteSpace(id))
         {
-            return View(_userManager.Users.ToList());
+            return BadRequest();
         }
-
-        public async Task<IActionResult> Details(string id)
+        var user = await _userManager.FindByIdAsync(id);
+        if(user == null)
         {
-            return View(await _userManager.FindByIdAsync(id));
+            return BadRequest();
         }
+        var userdetails = _mapper.Map<UserDetailsDto>(user);
+        userdetails.Roles = string.Join(",", _userManager.GetRolesAsync(user).Result.ToArray());
+        return View(userdetails);
+    }
 
-        public IActionResult Create()
-        {
-            return View();
-        }
+    public IActionResult Create()
+    {
+        return View();
+    }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(User user)
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Create(UserRegisterDto userDto)
+    {
+        try
         {
-            try
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
+                var user = _mapper.Map<User>(userDto);
+                user.RegistrationDate = DateTime.UtcNow;
+                var result = await _userManager.CreateAsync(user, userDto.Password);
+                if (result.Succeeded)
                 {
-                    await _userManager.CreateAsync(user);
+                    string defaultrole = "user";
+                    if(!await _roleManager.RoleExistsAsync(defaultrole))
+                    {
+                        await _roleManager.CreateAsync(new Role { Name = defaultrole});
+                    }
+                    await _userManager.AddToRoleAsync(user, defaultrole);
+                    return RedirectToAction(nameof(Index));
                 }
-                else
-                {
-                    return View(user);
-                }
-                return RedirectToAction(nameof(Index));
             }
-            catch
+            else
             {
-                return View();
+                return View(userDto);
             }
+            return RedirectToAction(nameof(Index));
         }
-
-        public IActionResult Edit(int id)
+        catch
         {
             return View();
         }
+    }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, IFormCollection collection)
+    public async Task<IActionResult> Edit(string id)
+    {
+        return View(await _userManager.FindByIdAsync(id));
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Edit(int id, IFormCollection collection)
+    {
+        try
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            return RedirectToAction(nameof(Index));
         }
-
-        public IActionResult Delete(int id)
+        catch
         {
             return View();
         }
+    }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Delete(int id, IFormCollection collection)
+    public IActionResult Delete(int id)
+    {
+        return View();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Delete(int id, IFormCollection collection)
+    {
+        try
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            return RedirectToAction(nameof(Index));
+        }
+        catch
+        {
+            return View();
         }
     }
 }

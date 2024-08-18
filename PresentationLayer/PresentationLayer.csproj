@@ -13,7 +13,6 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\Views\Users\" />
     <Folder Include="wwwroot\admin\assets\img\" />
     <Folder Include="wwwroot\Sandal\.git\objects\info\" />
     <Folder Include="wwwroot\Sandal\.git\refs\tags\" />

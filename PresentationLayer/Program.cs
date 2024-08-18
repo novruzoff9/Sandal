@@ -1,8 +1,12 @@
 using BusinessLayer.Abstract;
 using BusinessLayer.Concrete;
+using BusinessLayer.Mapping;
 using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
 using DataAccessLayer.Context;
+using EntityLayer.Concrete;
+using EntityLayer.DTOs.User;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace PresentationLayer;
@@ -28,6 +32,33 @@ public class Program
         builder.Services.AddScoped<IFAQRepository, FAQRepository>();
         builder.Services.AddScoped<IFAQService, FAQService>();
 
+        builder.Services.AddIdentity<User, Role>(options =>
+        {
+            options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789._";
+
+            options.User.RequireUniqueEmail = true;
+
+            options.Password.RequireUppercase = true;
+            options.Password.RequireLowercase = true;
+            options.Password.RequireNonAlphanumeric = true;
+            options.Password.RequireDigit = true;
+
+            options.Lockout.AllowedForNewUsers = true;
+            options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(2);
+            options.Lockout.MaxFailedAccessAttempts = 6;
+        })
+            .AddEntityFrameworkStores<SandalContext>()
+            .AddDefaultTokenProviders();
+
+        builder.Services.AddAuthentication()
+            .AddCookie(options =>
+            {
+                options.LoginPath = "/account/login";
+                options.AccessDeniedPath = "/account/accessdenied";
+            });
+
+        builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
+
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
@@ -43,6 +74,7 @@ public class Program
 
         app.UseRouting();
 
+        app.UseAuthentication();    
         app.UseAuthorization();
 
         app.UseEndpoints(endpoints =>
