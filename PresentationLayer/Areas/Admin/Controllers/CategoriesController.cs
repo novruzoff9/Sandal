@@ -1,11 +1,13 @@
 ﻿using BusinessLayer.Abstract;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace PresentationLayer.Areas.Admin.Controllers;
 
 [Area("admin")]
+[Authorize]
 public class CategoriesController : Controller
 {
     private readonly ICategoryService _categoryService;

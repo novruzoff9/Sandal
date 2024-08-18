@@ -34,7 +34,6 @@ public class Program
 
         builder.Services.AddIdentity<User, Role>(options =>
         {
-            options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789._";
 
             options.User.RequireUniqueEmail = true;
 

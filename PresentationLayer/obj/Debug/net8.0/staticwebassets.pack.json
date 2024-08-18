@@ -73,14 +73,6 @@
       "PackagePath": "staticwebassets\\Sandal\\css\\sass\\partials\\components\\_ourteam.scss"
     },
     {
-      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\css\\style.css",
-      "PackagePath": "staticwebassets\\Sandal\\css\\style.css"
-    },
-    {
-      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\css\\style.css.map",
-      "PackagePath": "staticwebassets\\Sandal\\css\\style.css.map"
-    },
-    {
       "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\css\\vendor.css",
       "PackagePath": "staticwebassets\\Sandal\\css\\vendor.css"
     },

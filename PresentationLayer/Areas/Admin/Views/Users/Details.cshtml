@@ -32,7 +32,7 @@
             @Html.DisplayNameFor(model => model.RegistrationDate)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.RegistrationDate.ToShortDateString())
+            @Html.DisplayFor(model => model.RegistrationDate)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.NormalizedUserName)
@@ -92,7 +92,7 @@
             @Html.DisplayNameFor(model => model.LockoutEnd)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.LockoutEnd.HasValue ? model.LockoutEnd.Value.ToString("g") : "N/A")
+            @Html.DisplayFor(model => model.LockoutEnd.HasValue)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.LockoutEnabled)

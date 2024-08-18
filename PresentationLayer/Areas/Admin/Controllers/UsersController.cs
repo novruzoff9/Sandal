@@ -57,14 +57,13 @@ public class UsersController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create(UserRegisterDto userDto)
+    public async Task<IActionResult> Create(UserCreateDto userDto)
     {
         try
         {
             if (ModelState.IsValid)
             {
                 var user = _mapper.Map<User>(userDto);
-                user.RegistrationDate = DateTime.UtcNow;
                 var result = await _userManager.CreateAsync(user, userDto.Password);
                 if (result.Succeeded)
                 {

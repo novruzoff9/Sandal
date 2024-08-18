@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\Sandal\.git\**" />
+    <Content Remove="wwwroot\Sandal\.git\**" />
+    <EmbeddedResource Remove="wwwroot\Sandal\.git\**" />
+    <None Remove="wwwroot\Sandal\.git\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <_ContentIncludedByDefault Remove="wwwroot\Sandal\css\StyleSheet414818.css" />
   </ItemGroup>
 
@@ -14,8 +21,6 @@
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="wwwroot\admin\assets\img\" />
-    <Folder Include="wwwroot\Sandal\.git\objects\info\" />
-    <Folder Include="wwwroot\Sandal\.git\refs\tags\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,34 +37,6 @@
     <None Include="wwwroot\admin\assets\js\Scroll.js" />
     <None Include="wwwroot\admin\assets\js\Slider.js" />
     <None Include="wwwroot\Sandal\.DS_Store" />
-    <None Include="wwwroot\Sandal\.git\config" />
-    <None Include="wwwroot\Sandal\.git\description" />
-    <None Include="wwwroot\Sandal\.git\HEAD" />
-    <None Include="wwwroot\Sandal\.git\hooks\applypatch-msg.sample" />
-    <None Include="wwwroot\Sandal\.git\hooks\commit-msg.sample" />
-    <None Include="wwwroot\Sandal\.git\hooks\fsmonitor-watchman.sample" />
-    <None Include="wwwroot\Sandal\.git\hooks\post-update.sample" />
-    <None Include="wwwroot\Sandal\.git\hooks\pre-applypatch.sample" />
-    <None Include="wwwroot\Sandal\.git\hooks\pre-commit.sample" />
-    <None Include="wwwroot\Sandal\.git\hooks\pre-merge-commit.sample" />
-    <None Include="wwwroot\Sandal\.git\hooks\pre-push.sample" />
-    <None Include="wwwroot\Sandal\.git\hooks\pre-rebase.sample" />
-    <None Include="wwwroot\Sandal\.git\hooks\pre-receive.sample" />
-    <None Include="wwwroot\Sandal\.git\hooks\prepare-commit-msg.sample" />
-    <None Include="wwwroot\Sandal\.git\hooks\push-to-checkout.sample" />
-    <None Include="wwwroot\Sandal\.git\hooks\sendemail-validate.sample" />
-    <None Include="wwwroot\Sandal\.git\hooks\update.sample" />
-    <None Include="wwwroot\Sandal\.git\index" />
-    <None Include="wwwroot\Sandal\.git\info\exclude" />
-    <None Include="wwwroot\Sandal\.git\logs\HEAD" />
-    <None Include="wwwroot\Sandal\.git\logs\refs\heads\master" />
-    <None Include="wwwroot\Sandal\.git\logs\refs\remotes\origin\HEAD" />
-    <None Include="wwwroot\Sandal\.git\objects\pack\pack-c51b271852b338bba37b8e4072b7c81ec18c578f.idx" />
-    <None Include="wwwroot\Sandal\.git\objects\pack\pack-c51b271852b338bba37b8e4072b7c81ec18c578f.pack" />
-    <None Include="wwwroot\Sandal\.git\objects\pack\pack-c51b271852b338bba37b8e4072b7c81ec18c578f.rev" />
-    <None Include="wwwroot\Sandal\.git\packed-refs" />
-    <None Include="wwwroot\Sandal\.git\refs\heads\master" />
-    <None Include="wwwroot\Sandal\.git\refs\remotes\origin\HEAD" />
     <None Include="wwwroot\Sandal\img\.DS_Store" />
     <None Include="wwwroot\Sandal\plugins\sticky-sidebar\dist\sticky-sidebar.min.js" />
     <None Include="wwwroot\Sandal\plugins\YTPlayer\dist\jquery.mb.YTPlayer.js" />

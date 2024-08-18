@@ -1,0 +1,64 @@
+﻿@model UserRegisterDto
+
+
+    <input type="hidden" value="@Context.Request.Query["ReturnUrl"]" name="returnUrl" />
+    <div class="ps-form__content">
+        <h5>Hesab üçün qeydiyyatdan keçin</h5>
+        <div class="form-group">
+            <input asp-for=FirstName class="form-control" type="text" placeholder="Adınız">
+        </div>
+        <div class="form-group">
+            <input asp-for=LastName class="form-control" type="text" placeholder="Soyadınız">
+        </div>
+        <div class="form-group">
+            <input asp-for=Email class="form-control" type="email" placeholder="Elektron ünvan">
+        </div>
+        <div class="form-group">
+            <input asp-for=PhoneNumber class="form-control" type="text" placeholder="Telefon nömrəsi">
+        </div>
+        <div class="form-group">
+            <input onkeyup="checkPasswords()" id="registerPass" asp-for=Password class="form-control" type="password" placeholder="Şifrə">
+        </div>
+        <div class="form-group">
+            <input onkeyup="checkPasswords()" id="PasswordAgain" class="form-control" type="password" placeholder="Təkrar şifrə">
+            <span id="errorofAgain" class="text-danger field-validation-error"></span>
+        </div>
+        <div class="ps-form__decs">
+            <div class="ps-checkbox">
+                <input asp-for="AcceptPrivacy" class="form-control" />
+                <label asp-for="AcceptPrivacy"><a href="#">Gizlilik müqaviləsini</a> oxudum və qəbul edirəm</label>
+            </div>
+            <br>
+            <div class="ps-checkbox">
+                <input asp-for=AllowAds class="form-control" type="checkbox" checked />
+                <label asp-for="AllowAds">Reklamlara icazə verirəm</label>
+            </div>
+            <br>
+            <p class="mb-3">Qeydiyyatdan keçmək üçün <a href="#" data-toggle="modal" data-target="#product-quickview">abunəlik şərtlərini</a> oxudum və qəbul edirəm</p>
+        </div>
+        <div class="form-group submit">
+            <button id="registerbtn" disabled style="cursor:not-allowed" type="submit" class="ps-btn ps-btn--fullwidth">Qeydiyyat</button>
+        </div>
+    </div>
+
+<script>
+    function checkPasswords() {
+        pass = document.getElementById("registerPass").value;
+        passAgain = document.getElementById("PasswordAgain").value;
+        console.log(pass, passAgain);
+        errmormsg = document.getElementById("errorofAgain");
+        if (pass != passAgain) {
+            errmormsg.textContent = "Daxil edilən şifrələr eyni deyil!";
+        }
+        else {
+            errmormsg.textContent = "";
+            regBtn = document.getElementById("registerbtn");
+            regBtn.style.cursor = "pointer";
+            regBtn.removeAttribute("disabled");
+        }
+    }
+</script>
+
+@section js{
+    
+}

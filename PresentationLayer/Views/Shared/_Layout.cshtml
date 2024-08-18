@@ -600,6 +600,7 @@
     <script src="~/Sandal/plugins/gmap3.min.js"></script>
     <!-- custom scripts-->
     <script src="~/Sandal/js/main.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    @await RenderSectionAsync("js", required: false)
 </body>
-
 </html>
