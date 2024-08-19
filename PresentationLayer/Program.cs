@@ -5,7 +5,6 @@ using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
 using DataAccessLayer.Context;
 using EntityLayer.Concrete;
-using EntityLayer.DTOs.User;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,7 +20,7 @@ public class Program
         builder.Services.AddControllersWithViews();
 
         builder.Services.AddDbContext<SandalContext>(options =>
-            options.UseSqlServer(builder.Configuration.GetConnectionString("HomePC") ?? throw new InvalidOperationException("Connection string 'HomePC' not found.")));
+            options.UseSqlServer(builder.Configuration.GetConnectionString("TITAN") ?? throw new InvalidOperationException("Connection string 'HomePC' not found.")));
 
         builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
         builder.Services.AddScoped<ICategoryService, CategoryService>();
@@ -73,7 +72,7 @@ public class Program
 
         app.UseRouting();
 
-        app.UseAuthentication();    
+        app.UseAuthentication();
         app.UseAuthorization();
 
         app.UseEndpoints(endpoints =>

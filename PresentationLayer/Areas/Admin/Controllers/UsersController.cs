@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using EntityLayer.Concrete;
 using EntityLayer.DTOs.User;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -41,7 +40,7 @@ public class UsersController : Controller
             return BadRequest();
         }
         var user = await _userManager.FindByIdAsync(id);
-        if(user == null)
+        if (user == null)
         {
             return BadRequest();
         }
@@ -68,9 +67,9 @@ public class UsersController : Controller
                 if (result.Succeeded)
                 {
                     string defaultrole = "user";
-                    if(!await _roleManager.RoleExistsAsync(defaultrole))
+                    if (!await _roleManager.RoleExistsAsync(defaultrole))
                     {
-                        await _roleManager.CreateAsync(new Role { Name = defaultrole});
+                        await _roleManager.CreateAsync(new Role { Name = defaultrole });
                     }
                     await _userManager.AddToRoleAsync(user, defaultrole);
                     return RedirectToAction(nameof(Index));

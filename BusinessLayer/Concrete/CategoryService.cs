@@ -1,16 +1,19 @@
 using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace BusinessLayer.Concrete;
 
 public class CategoryService : ICategoryService
 {
     private readonly ICategoryRepository _CategoryRepository;
+    private readonly IMemoryCache _memoryCache;
 
-    public CategoryService(ICategoryRepository CategoryRepository)
+    public CategoryService(ICategoryRepository CategoryRepository, IMemoryCache memoryCache)
     {
         _CategoryRepository = CategoryRepository;
+        _memoryCache = memoryCache;
     }
 
     public void CreateCategory(Category entity)
@@ -25,7 +28,25 @@ public class CategoryService : ICategoryService
 
     public List<Category> GetAllCategory()
     {
-        return _CategoryRepository.GetAll().ToList();
+        var list = new List<Category>();
+        if (!_memoryCache.TryGetValue("AllCategories", out List<Category> _categories))
+        {
+            list = _CategoryRepository.GetAll().ToList();
+
+            var cacheOptions = new MemoryCacheEntryOptions()
+            {
+                SlidingExpiration = TimeSpan.FromMinutes(5)
+            };
+
+            _memoryCache.Set("AllCategories", list, cacheOptions);
+        }
+        else
+        {
+            list = _categories;
+        }
+
+        return list;
+        //return _CategoryRepository.GetAll().ToList();
     }
 
     public async Task<List<Category>> GetAllCategoryAsync()
