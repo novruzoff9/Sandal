@@ -36,7 +36,6 @@
     <None Include="wwwroot\admin\assets\js\Layout.js" />
     <None Include="wwwroot\admin\assets\js\Scroll.js" />
     <None Include="wwwroot\admin\assets\js\Slider.js" />
-    <None Include="wwwroot\Sandal\.DS_Store" />
     <None Include="wwwroot\Sandal\img\.DS_Store" />
     <None Include="wwwroot\Sandal\plugins\sticky-sidebar\dist\sticky-sidebar.min.js" />
     <None Include="wwwroot\Sandal\plugins\YTPlayer\dist\jquery.mb.YTPlayer.js" />

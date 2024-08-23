@@ -2577,18 +2577,6 @@
       "PackagePath": "staticwebassets\\Sandal\\img\\vendor\\vendor-store.jpg"
     },
     {
-      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\incs-template1\\config.php",
-      "PackagePath": "staticwebassets\\Sandal\\incs-template1\\config.php"
-    },
-    {
-      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\incs-template1\\cookies-for-most.php",
-      "PackagePath": "staticwebassets\\Sandal\\incs-template1\\cookies-for-most.php"
-    },
-    {
-      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\incs-template1\\header.php",
-      "PackagePath": "staticwebassets\\Sandal\\incs-template1\\header.php"
-    },
-    {
       "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\Sandal\\index.php",
       "PackagePath": "staticwebassets\\Sandal\\index.php"
     },
