@@ -1,225 +1,173 @@
 #!/bin/bash
-Models_folder_path="C:/Users/Novruzoff/source/repos/Sandal/EntityLayer/Concrete"
 
-# Data Access Layer-də olan Abtract və Concrete folderları
+# Renk tanımları
+COLOR_RESET="\033[0m"
+COLOR_BLUE="\033[34m"
+COLOR_GREEN="\033[32m"
+
+# Klasör yolları
+Models_folder_path="C:/Users/Novruzoff/source/repos/Sandal/EntityLayer/Concrete"
 DAL_Interface_folder_path="C:/Users/Novruzoff/source/repos/Sandal/DataAccessLayer/Abstract"
 DAL_concrete_folder_path="C:/Users/Novruzoff/source/repos/Sandal/DataAccessLayer/Concrete"
-
-# Business Layer-də olan Abtract və Concrete folderları
 BL_Interface_folder_path="C:/Users/Novruzoff/source/repos/Sandal/BusinessLayer/Abstract"
 BL_concrete_folder_path="C:/Users/Novruzoff/source/repos/Sandal/BusinessLayer/Concrete"
 
-if [ ! -d "$DAL_Interface_folder_path" ]; then
-    mkdir -p "$DAL_Interface_folder_path"
-    echo "Data Access Layer abstract qovluq yaradıldı -> $DAL_Interface_folder_path"
-else
-    echo "Data Access Layer abstract qovluq mövcud -> $DAL_Interface_folder_path"
-fi
-
-if [ ! -d "$DAL_concrete_folder_path" ]; then
-    mkdir -p "$DAL_concrete_folder_path"
-    echo "Data Access Layer concrete qovluq yaradıldı -> $DAL_concrete_folder_path"
-else
-    echo "Data Access Layer concrete qovluq mövcud -> $DAL_concrete_folder_path"
-fi
-
-if [ ! -d "$BL_Interface_folder_path" ]; then
-    mkdir -p "$BL_Interface_folder_path"
-    echo "Busines Layer abstract qovluq yaradıldı -> $BL_Interface_folder_path"
-else
-    echo "Busines Layer abstract qovluq mövcud -> $BL_Interface_folder_path"
-fi
-
-if [ ! -d "$BL_concrete_folder_path" ]; then
-    mkdir -p "$BL_concrete_folder_path"
-    echo "Busines Layer concrete qovluq yaradıldı -> $BL_concrete_folder_path"
-else
-    echo "Busines Layer concrete qovluq mövcud -> $BL_concrete_folder_path"
-fi
-
-for file in "$Models_folder_path"/*; do
-
-    # Class fayllarini toplamaq
-    filename="$(basename "$file")"
-
-    # Class-in adini almaq
-    class_name="${filename%.*}"
-
-    #! Data Access Layer
-
-    new_crud_interface="I${class_name}Repository.cs"
-
-if [ ! -d "$DAL_Interface_folder_path/$new_crud_interface" ]; then
-    # Hemin class-dan Abstract Interface yaratmaq
-    touch "$DAL_Interface_folder_path/$new_crud_interface"
-
-    # Abstract Interface-in icini doldurmaq
-    cat <<EOL >"$DAL_Interface_folder_path/$new_crud_interface"
-using EntityLayer.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DataAccessLayer.Abstract;
-
-public interface I${class_name}Repository : IGenericRepository<${class_name}>
-{
+# Klasörleri oluştur
+create_folder() {
+    local path=$1
+    if [ ! -d "$path" ]; then
+        mkdir -p "$path"
+        echo -e "${COLOR_GREEN}Klasör oluşturuldu: $path${COLOR_RESET}"
+    else
+        echo -e "${COLOR_BLUE}Klasör zaten mevcut: $path${COLOR_RESET}"
+    fi
 }
 
-EOL
-else
-    echo "Salam"
-fi
+create_folder "$DAL_Interface_folder_path" &
+create_folder "$DAL_concrete_folder_path" &
+create_folder "$BL_Interface_folder_path" &
+create_folder "$BL_concrete_folder_path" &
+wait
 
+# Dosya oluşturma işlemini tanımla
+create_files() {
+    local file=$1
+    local class_name=$(basename "$file" .cs)
     
-
-    new_dal_concrete_class="${class_name}Repository.cs"
-
-
-if [ ! -d "$DAL_concrete_folder_path/$new_dal_concrete_class" ]; then
-    # Hemin class-dan entityframework class yaratmaq
-    touch "$DAL_concrete_folder_path/$new_dal_concrete_class"
-
-    # EntityFramework Class-in icini doldurmaq
-    cat <<EOL >"$DAL_concrete_folder_path/$new_dal_concrete_class"
-using DataAccessLayer.Abstract;
-using DataAccessLayer.Context;
-using DataAccessLayer.Repositories;
+    # Data Access Layer dosyalarını oluştur
+    local dal_interface="$DAL_Interface_folder_path/I${class_name}Repository.cs"
+    local dal_concrete="$DAL_concrete_folder_path/${class_name}Repository.cs"
+    
+    if [ ! -f "$dal_interface" ]; then
+        cat <<EOL >"$dal_interface"
 using EntityLayer.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DataAccessLayer.Concrete;
-
-public class ${class_name}Repository : GenericRepository<${class_name}>, I${class_name}Repository
+namespace DataAccessLayer.Abstract
 {
-    public ${class_name}Repository(SandalContext context) : base(context)
+    public interface I${class_name}Repository : IGenericRepository<${class_name}>
     {
     }
 }
-
-
 EOL
-else
-    echo "Salam"
-fi
+        echo -e "${COLOR_GREEN}Dosya oluşturuldu: $dal_interface${COLOR_RESET}"
+    else
+        echo -e "${COLOR_BLUE}Dosya zaten mevcut: $dal_interface${COLOR_RESET}"
+    fi
 
-    
-
-    echo "Created file at Data Access Layer: $DAL_Interface_folder_path/$new_crud_interface"
-    echo "Created file at Data Access Layer: $DAL_concrete_folder_path/$new_dal_concrete_class"
-
-    #! Business Layer
-
-    new_service_interface="I${class_name}Service.cs"
-
-if [ ! -d "$BL_Interface_folder_path/$new_service_interface" ]; then
-    # Hemin class-dan Abstract Interface yaratmaq
-    touch "$BL_Interface_folder_path/$new_service_interface"
-
-    # Abstract Interface-in icini doldurmaq
-    cat <<EOL >"$BL_Interface_folder_path/$new_service_interface"
+    if [ ! -f "$dal_concrete" ]; then
+        cat <<EOL >"$dal_concrete"
+using DataAccessLayer.Abstract;
+using DataAccessLayer.Context;
 using EntityLayer.Concrete;
-using System;
+
+namespace DataAccessLayer.Concrete
+{
+    public class ${class_name}Repository : GenericRepository<${class_name}>, I${class_name}Repository
+    {
+        public ${class_name}Repository(SandalContext context) : base(context)
+        {
+        }
+    }
+}
+EOL
+        echo -e "${COLOR_GREEN}Dosya oluşturuldu: $dal_concrete${COLOR_RESET}"
+    else
+        echo -e "${COLOR_BLUE}Dosya zaten mevcut: $dal_concrete${COLOR_RESET}"
+    fi
+
+    # Business Layer dosyalarını oluştur
+    local bl_interface="$BL_Interface_folder_path/I${class_name}Service.cs"
+    local bl_concrete="$BL_concrete_folder_path/${class_name}Service.cs"
+    
+    if [ ! -f "$bl_interface" ]; then
+        cat <<EOL >"$bl_interface"
+using EntityLayer.Concrete;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLayer.Abstract;
-
-public interface I${class_name}Service
+namespace BusinessLayer.Abstract
 {
-    void Create${class_name}(${class_name} entity);
-    void Update${class_name}(${class_name} entity);
-    void Delete${class_name}(${class_name} entity);
-    ${class_name} Get${class_name}ById(int id);
-    List<${class_name}> GetAll${class_name}();
-    Task<List<${class_name}>> GetAll${class_name}Async();
+    public interface I${class_name}Service
+    {
+        void Create${class_name}(${class_name} entity);
+        void Update${class_name}(${class_name} entity);
+        void Delete${class_name}(${class_name} entity);
+        ${class_name} Get${class_name}ById(int id);
+        List<${class_name}> GetAll${class_name}();
+        Task<List<${class_name}>> GetAll${class_name}Async();
+    }
 }
-
 EOL
-else
-    echo "Busines Layer concrete qovluq mövcud -> $BL_concrete_folder_path"
-fi
+        echo -e "${COLOR_GREEN}Dosya oluşturuldu: $bl_interface${COLOR_RESET}"
+    else
+        echo -e "${COLOR_BLUE}Dosya zaten mevcut: $bl_interface${COLOR_RESET}"
+    fi
 
-
-    
-
-    new_bl_concrete_class="${class_name}Service.cs"
-
-if [ ! -d "$BL_concrete_folder_path" ]; then
-     # Hemin class-dan entityframework class yaratmaq
-    touch "$BL_concrete_folder_path/$new_bl_concrete_class"
-
-    # EntityFramework Class-in icini doldurmaq
-    cat <<EOL >"$BL_concrete_folder_path/$new_bl_concrete_class"
+    if [ ! -f "$bl_concrete" ]; then
+        cat <<EOL >"$bl_concrete"
 using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLayer.Concrete;
-
-public class ${class_name}Service : I${class_name}Service
+namespace BusinessLayer.Concrete
 {
-    private readonly I${class_name}Repository _${class_name}Repository;
-
-    public ${class_name}Service(I${class_name}Repository ${class_name}Repository)
+    public class ${class_name}Service : I${class_name}Service
     {
-        _${class_name}Repository = ${class_name}Repository;
-    }
+        private readonly I${class_name}Repository _${class_name}Repository;
 
-    public void Create${class_name}(${class_name} entity)
-    {
-        _${class_name}Repository.Insert(entity);
-    }
+        public ${class_name}Service(I${class_name}Repository ${class_name}Repository)
+        {
+            _${class_name}Repository = ${class_name}Repository;
+        }
 
-    public void Delete${class_name}(${class_name} entity)
-    {
-        _${class_name}Repository.Delete(entity);
-    }
+        public void Create${class_name}(${class_name} entity)
+        {
+            _${class_name}Repository.Insert(entity);
+        }
 
-    public List<${class_name}> GetAll${class_name}()
-    {
-        return _${class_name}Repository.GetAll().ToList();
-    }
+        public void Delete${class_name}(${class_name} entity)
+        {
+            _${class_name}Repository.Delete(entity);
+        }
 
-    public async Task<List<${class_name}>> GetAll${class_name}Async()
-    {
-        return await _${class_name}Repository.GetAllAsync();
-    }
+        public List<${class_name}> GetAll${class_name}()
+        {
+            return _${class_name}Repository.GetAll().ToList();
+        }
 
-    public ${class_name} Get${class_name}ById(int id)
-    {
-        return _${class_name}Repository.GetById(id);
-    }
+        public async Task<List<${class_name}>> GetAll${class_name}Async()
+        {
+            return await _${class_name}Repository.GetAllAsync();
+        }
 
-    public void Update${class_name}(${class_name} entity)
-    {
-        _${class_name}Repository.Update(entity);
+        public ${class_name} Get${class_name}ById(int id)
+        {
+            return _${class_name}Repository.GetById(id);
+        }
+
+        public void Update${class_name}(${class_name} entity)
+        {
+            _${class_name}Repository.Update(entity);
+        }
     }
 }
-
-
 EOL
-else
-    echo "Busines Layer concrete qovluq mövcud -> $BL_concrete_folder_path"
-fi
+        echo -e "${COLOR_GREEN}Dosya oluşturuldu: $bl_concrete${COLOR_RESET}"
+    else
+        echo -e "${COLOR_BLUE}Dosya zaten mevcut: $bl_concrete${COLOR_RESET}"
+    fi
+}
 
-   
-
-    echo "Created file at Business Layer: $BL_Interface_folder_path/$new_service_interface"
-    echo "Created file at Business Layer: $BL_concrete_folder_path/$new_bl_concrete_class"
+# Dosyaları işle
+for file in "$Models_folder_path"/*.cs; do
+    create_files "$file" &
 done
+wait
 
-sleep 10
+echo -e "${COLOR_GREEN}Tüm dosyalar oluşturuldu.${COLOR_RESET}"
+
+# Kullanıcıdan bir tuşa basmasını bekle
+read -p "Devam etmek için herhangi bir tuşa basın..." -n1 -s

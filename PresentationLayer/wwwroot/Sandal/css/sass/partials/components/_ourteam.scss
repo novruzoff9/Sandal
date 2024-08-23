@@ -1,0 +1,99 @@
+.ps-block--ourteam {
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+  .ps-block__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 20px;
+    z-index: 30;
+    transition: all 0.4s ease;
+    transform: translateY(50px);
+    visibility: hidden;
+    opacity: 0;
+    h4 {
+      font-weight: 600;
+    }
+    p,
+    h4,
+    i {
+      color: #fff;
+    }
+  }
+}
+
+.ps-block--ourteam:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(20, 80, 232, 0.65);
+  z-index: 10;
+  transition: all 0.4s ease;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.ps-block--ourteam .ps-block__content ul li {
+  display: inline-block;
+  margin-right: 10px;
+  a {
+    font-size: 16px;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}
+
+.ps-block--ourteam
+  .ps-block__content
+  ul
+  li
+  a
+  .ps-block--ourteam
+  .ps-block__content
+  ul
+  li:last-child {
+  margin-right: 0;
+}
+
+.ps-block--ourteam.blank {
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  &:before {
+    display: none;
+  }
+}
+
+.ps-block--ourteam.blank a {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.ps-block--ourteam.blank a:hover {
+  color: $secondary-color;
+}
+
+.ps-block--ourteam:hover:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+.ps-block--ourteam:hover .ps-block__content {
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+}
