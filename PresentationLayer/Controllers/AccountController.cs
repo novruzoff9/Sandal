@@ -3,7 +3,6 @@ using EntityLayer.Concrete;
 using EntityLayer.DTOs.User;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 using Newtonsoft.Json;
 using PresentationLayer.Models;
 
@@ -61,7 +60,7 @@ public class AccountController : Controller
         if (ModelState.IsValid)
         {
             var user = await _userManager.FindByEmailAsync(login.Email);
-            if(user is null)
+            if (user is null)
             {
                 TempData["logintry"] = JsonConvert.SerializeObject(login);
                 return RedirectToAction(nameof(Login));
@@ -71,6 +70,13 @@ public class AccountController : Controller
             if (result.Succeeded)
             {
                 string decodeUrl = Uri.UnescapeDataString(returnUrl ?? @"\");
+
+                CookieOptions options = new()
+                {
+                    Expires = DateTime.Now.AddMonths(1)
+                };
+
+                Response.Cookies.Append("CURRENT_USER", JsonConvert.SerializeObject(user), options);
                 return Redirect(decodeUrl);
             }
         }

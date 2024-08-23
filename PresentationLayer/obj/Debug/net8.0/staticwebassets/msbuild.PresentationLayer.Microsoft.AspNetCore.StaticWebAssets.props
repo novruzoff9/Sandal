@@ -1296,6 +1296,7 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\PresentationLayer.bundle.scp.css))</OriginalItemSpec>
     </StaticWebAsset>
+<<<<<<< HEAD
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Sandal\css\autopart.css))">
       <SourceType>Package</SourceType>
       <SourceId>PresentationLayer</SourceId>
@@ -13760,5 +13761,7 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Sandal\plugins\YTPlayer\dist\jquery.mb.YTPlayer.min.js))</OriginalItemSpec>
     </StaticWebAsset>
+=======
+>>>>>>> 0101289998ec9f2721116157458265c8ce5044d5
   </ItemGroup>
 </Project>
