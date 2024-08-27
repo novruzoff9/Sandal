@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\novruzoff\\source\\repos\\sandal\\presentationlayer\\views\\shop\\_filters.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\views\\shop\\_filters.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\novruzoff\\source\\repos\\sandal\\presentationlayer\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\novruzoff\\source\\repos\\sandal\\presentationlayer\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\novruzoff\\source\\repos\\sandal\\presentationlayer\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +26,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Filters.cshtml",
+              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Views\\Shop\\_Filters.cshtml",
+              "RelativeDocumentMoniker": "PresentationLayer\\Views\\Shop\\_Filters.cshtml",
+              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Views\\Shop\\_Filters.cshtml",
+              "RelativeToolTip": "PresentationLayer\\Views\\Shop\\_Filters.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-27T13:54:28.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Views\\Shop\\Index.cshtml",
+              "RelativeDocumentMoniker": "PresentationLayer\\Views\\Shop\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Views\\Shop\\Index.cshtml",
+              "RelativeToolTip": "PresentationLayer\\Views\\Shop\\Index.cshtml",
+              "ViewState": "AQIAANMDAAAAAAAAAAAYwOMDAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-26T20:37:24.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ShopController.cs",
+              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Controllers\\ShopController.cs",
+              "RelativeDocumentMoniker": "PresentationLayer\\Controllers\\ShopController.cs",
+              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Controllers\\ShopController.cs",
+              "RelativeToolTip": "PresentationLayer\\Controllers\\ShopController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwBUAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T20:34:53.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "PresentationLayer\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "PresentationLayer\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAH8AAAAAAAAAAAAAAJQAAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-25T00:03:09.398Z",
+              "EditorCaption": ""
             }
           ]
         }

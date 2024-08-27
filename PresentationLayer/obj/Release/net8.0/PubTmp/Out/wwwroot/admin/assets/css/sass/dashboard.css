@@ -1,0 +1,36 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f2f4f8 !important;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 50px 0;
+}
+@media only screen and (min-width: 1500px) {
+  section {
+    padding: 20px 12vw;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1499px) {
+  section {
+    padding: 20px 5vw;
+  }
+}
+section h2 {
+  margin: 50px auto;
+  color: #030303;
+}
+section h2.header-title {
+  margin: 50px auto 10px auto;
+  color: #030303;
+}
+section h5 {
+  margin: 0 auto 40px auto;
+  color: #62717c;
+}/*# sourceMappingURL=dashboard.css.map */

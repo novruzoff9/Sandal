@@ -1,0 +1,70 @@
+//$primary-color: #1450e8;
+$primary-color: #6237a0;
+$secondary-color: #1450e8;
+//$secondary-color: #c30dfa;
+$thirdy-color: #f81734;
+$light-green: #EEF2F6;
+$light-blue: #ddffff;
+$light-purple: #f0e6ff;
+$light-grey: #EEF2F6;
+$green: #09b451;
+
+
+
+
+$section-padding: 20px 200px;
+$mobile-section-padding: 20px;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin section-padding($top) {
+  @media only screen and (min-width: 1500px){
+    padding: $top 12vw;
+  }
+  @media only screen and (min-width: 600px) and (max-width: 1499px){
+    padding: $top 5vw;
+  }
+}
+
+@mixin box-shadow {
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
+}
+@mixin input {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 8px;
+  &:focus{
+    border-color: $secondary-color;
+  }
+}
+
+@mixin action-button($color) {
+  background-color: $color;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+.ps-btn, button.ps-btn {
+  display: inline-block;
+  padding: 15px 45px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: $primary-color;
+  transition: all .4s ease;
+  cursor: pointer;
+}

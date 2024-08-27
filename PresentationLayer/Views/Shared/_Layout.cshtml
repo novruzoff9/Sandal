@@ -52,19 +52,7 @@
                         <div class="menu__toggle"><i class="icon-menu"></i><span>Kataloq</span></div>
                         <div class="menu__content">
                             <ul class="menu--dropdown">
-                                <li>
-                                    <a href="#.html">Trendlər</a>
-                                </li>
-                                <li>
-                                    <a href="#.html">Elektronika</a>
-                                </li>
-                                <li>
-                                    <a href="#.html">Geyim</a>
-                                </li>
-                                <li>
-                                    <a href="#.html">Kitab</a>
-                                </li>
-                                <li><a href="#.html">Vokal alətləri</a>
+                                @await Component.InvokeAsync("Catalog")
                             </ul>
                         </div>
                     </div><a class="ps-logo" asp-controller="Home"><img src="~/Sandal/img/logo.png" alt=""></a>
@@ -114,7 +102,10 @@
                         </div>
                         <div class="ps-block--user-header">
                             <div class="ps-block__left"><i class="icon-user"></i></div>
-                            <div class="ps-block__right"><a href="my-account.html">Giriş</a><a href="my-account.html">Qeydiyyat</a></div>
+                            <div class="ps-block__right">
+                                <a asp-controller="account" asp-action="login">Giriş</a>
+                                <a asp-controller="account" asp-action="login">Qeydiyyat</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -138,6 +129,7 @@
                 </div>
                 <div class="navigation__right">
                     <ul class="menu">
+                        <li class="menu-item"><a asp-controller="shop" asp-action="index">Məhsullar</a></li>
                         <li class="menu-item"><a asp-controller="about" asp-action="index">Haqqımızda</a></li>
                         <li class="menu-item"><a asp-controller="contact" asp-action="index">Əlaqə</a></li>
                         <li class="menu-item"><a asp-controller="about" asp-action="faqs">Tez-Tez soruşulanlar</a></li>
@@ -157,7 +149,7 @@
                         </li>
                     </ul>
                     <div class="ps-block--header-hotline inline">
-                        <p><i class="icon-telephone"></i>Qaynar xətt:<strong> +994 70 310 80 88</strong></p>
+                        <p><i class="icon-telephone"></i>Qaynar xətt:<strong> *4242</strong></p>
                     </div>
                 </div>
             </div>
