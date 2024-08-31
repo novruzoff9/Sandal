@@ -55,7 +55,7 @@
                                 @await Component.InvokeAsync("Catalog")
                             </ul>
                         </div>
-                    </div><a class="ps-logo" asp-controller="Home"><img src="~/Sandal/img/logo.png" alt=""></a>
+                    </div><a class="ps-logo" asp-controller="home" asp-action="index"><img src="~/Sandal/img/logo.png" alt=""></a>
                 </div>
                 <div class="header__content-center">
                     <form class="ps-form--quick-search" action="index.html" method="get">
@@ -103,8 +103,15 @@
                         <div class="ps-block--user-header">
                             <div class="ps-block__left"><i class="icon-user"></i></div>
                             <div class="ps-block__right">
-                                <a asp-controller="account" asp-action="login">Giriş</a>
-                                <a asp-controller="account" asp-action="login">Qeydiyyat</a>
+                                @if (!Context.User.Identity.IsAuthenticated)
+                                {
+                                    <a asp-controller="account" asp-action="login">Giriş</a>
+                                    <a asp-controller="account" asp-action="login">Qeydiyyat</a>
+                                }
+                                else
+                                {
+                                    <a asp-controller="account" asp-action="profile">Profilim</a>
+                                }
                             </div>
                         </div>
                     </div>

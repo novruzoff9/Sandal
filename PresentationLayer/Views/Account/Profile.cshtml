@@ -1,0 +1,77 @@
+﻿@model User
+<div class="ps-breadcrumb">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a asp-route="/">Əsas</a></li>
+            <li>Profilim</li>
+        </ul>
+    </div>
+</div>
+<section class="ps-section--account">
+    <div class="container">
+        <div class="row">
+            
+            @await Html.PartialAsync("_ProfileMenu")
+
+            <div class="col-lg-8">
+                <div class="ps-section__right">
+                    <form class="ps-form--account-setting" asp-action="UpdateProfile">
+                        <div class="ps-form__header">
+                            <h3> İstifadəçi məlumatları</h3>
+                        </div>
+                        <div class="ps-form__content">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label asp-for="FirstName">Ad</label>
+                                        <input class="form-control" asp-for="FirstName">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label asp-for="LastName">Soyad</label>
+                                        <input class="form-control" asp-for="LastName">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label asp-for="PhoneNumber">Telefon nömrəsi</label>
+                                        <input class="form-control" asp-for="PhoneNumber">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label asp-for="Email">Email</label>
+                                        <input class="form-control" asp-for="Email">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label asp-for="BirthDay">Doğum tarixi</label>
+                                        <input class="form-control" type="date" asp-for="BirthDay">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label asp-for="Gender">Gender</label>
+                                        <select class="form-control" asp-for="Gender">
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group submit">
+                            <button class="ps-btn">Yenilə</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

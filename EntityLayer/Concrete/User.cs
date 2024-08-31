@@ -10,4 +10,7 @@ public class User : IdentityUser
     public string LastName { get; set; } = null!;
     [DataType(DataType.Date)]
     public DateTime RegistrationDate { get; set; }
+    public DateOnly? BirthDay { get; set; }
+    public string? Gender { get; set; }
+    public ICollection<UserFavoriteProduct>? FavoriteProducts { get; set; }
 }

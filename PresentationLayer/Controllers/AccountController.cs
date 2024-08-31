@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using DataAccessLayer.Context;
 using EntityLayer.Concrete;
 using EntityLayer.DTOs.User;
 using Microsoft.AspNetCore.Identity;
@@ -12,13 +13,15 @@ public class AccountController : Controller
 {
     private readonly UserManager<User> _userManager;
     private readonly SignInManager<User> _signInManager;
+    private readonly SandalContext _context;
     private readonly IMapper _mapper;
 
-    public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, IMapper mapper)
+    public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, IMapper mapper, SandalContext context)
     {
         _userManager = userManager;
         _signInManager = signInManager;
         _mapper = mapper;
+        _context = context;
     }
 
     public IActionResult Index()
@@ -110,5 +113,31 @@ public class AccountController : Controller
         }
         TempData["registertry"] = JsonConvert.SerializeObject(register);
         return RedirectToAction(nameof(Login));
+    }
+
+    public IActionResult _ProfileMenu()
+    {
+        return PartialView();
+    }
+
+    public async Task<IActionResult> Profile()
+    {
+        var user = await _userManager.GetUserAsync(User);
+        return View(user);
+    }
+
+    public async Task<IActionResult> UpdateProfile(UserUpdateProfileDto user)
+    {
+        var currentuser = await _userManager.GetUserAsync(User);
+        foreach (var property in typeof(UserUpdateProfileDto).GetProperties())
+        {
+            if(property.GetValue(user) != null)
+            {
+                typeof(User).GetProperty(property.Name).SetValue(currentuser, property.GetValue(user));
+            }
+        }
+        await _userManager.UpdateAsync(currentuser);
+        _context.SaveChanges();
+        return RedirectToAction(nameof(Profile));
     }
 }
