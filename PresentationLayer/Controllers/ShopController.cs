@@ -4,9 +4,11 @@ using DataAccessLayer.Context;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using PresentationLayer.Models;
+using PresentationLayer.Models.Product;
 
 namespace PresentationLayer.Controllers;
 
@@ -25,7 +27,18 @@ public class ShopController : Controller
 
     public IActionResult Index()
     {
-        var products = _productService.GetAllWithRelations();
+        var user = JsonConvert.DeserializeObject<User>(Request.Cookies["CURRENT_USER"]);
+        string userId = user.Id;
+        var products = _productService.GetAllWithRelations()
+            .Select(p=> new ProductViewModel
+            {
+                Id = p.Id,
+                Name = p.Name,
+                CategoryName = p.Category.Name,
+                Price = p.Price,
+                IsInWishlist = _context.UserFavoriteProducts.Any(x=>x.ProductId == p.Id && x.UserId == userId)
+            })
+            .ToList();
         return View(products);
     }
 
@@ -52,11 +65,40 @@ public class ShopController : Controller
 
     public async Task<IActionResult> Wishlist()
     {
-        var user = await _userManager.GetUserAsync(User);
+        var user = JsonConvert.DeserializeObject<User>(Request.Cookies["CURRENT_USER"]);
         var favorites = await _context.UserFavoriteProducts
             .Where(x => x.UserId == user.Id)
             .Select(x => x.Product)
             .ToListAsync();
         return View(favorites);
+    }
+
+
+    public async Task<IActionResult> AddWishlist([FromRoute] int id)
+    {
+        var user = JsonConvert.DeserializeObject<User>(Request.Cookies["CURRENT_USER"]);
+        string userId = user.Id;
+
+        var favorite = await _context.UserFavoriteProducts
+            .FirstOrDefaultAsync(uf => uf.UserId == userId && uf.ProductId == id);
+
+        if (favorite != null)
+        {
+            _context.UserFavoriteProducts.Remove(favorite);
+        }
+
+        else
+        {
+            favorite = new UserFavoriteProduct
+            {
+                UserId = userId,
+                ProductId = id
+            };
+
+            _context.UserFavoriteProducts.Add(favorite);
+        }
+
+        await _context.SaveChangesAsync();
+        return NoContent();
     }
 }

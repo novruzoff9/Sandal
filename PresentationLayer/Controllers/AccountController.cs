@@ -59,7 +59,6 @@ public class AccountController : Controller
     [HttpPost]
     public async Task<IActionResult> SignIn(UserLoginDto login, string? returnUrl)
     {
-        await _signInManager.SignOutAsync();
         if (ModelState.IsValid)
         {
             var user = await _userManager.FindByEmailAsync(login.Email);
@@ -120,9 +119,9 @@ public class AccountController : Controller
         return PartialView();
     }
 
-    public async Task<IActionResult> Profile()
+    public IActionResult Profile()
     {
-        var user = await _userManager.GetUserAsync(User);
+        var user = JsonConvert.DeserializeObject<User>(Request.Cookies["CURRENT_USER"]);
         return View(user);
     }
 
@@ -131,13 +130,29 @@ public class AccountController : Controller
         var currentuser = await _userManager.GetUserAsync(User);
         foreach (var property in typeof(UserUpdateProfileDto).GetProperties())
         {
-            if(property.GetValue(user) != null)
+            if (property.GetValue(user) != default && property.GetValue(user) != null)
             {
                 typeof(User).GetProperty(property.Name).SetValue(currentuser, property.GetValue(user));
             }
         }
         await _userManager.UpdateAsync(currentuser);
         _context.SaveChanges();
+
+        Response.Cookies.Delete("CURRENT_USER"); 
+
+        CookieOptions options = new()
+        {
+            Expires = DateTime.Now.AddMonths(1)
+        };
+
+        Response.Cookies.Append("CURRENT_USER", JsonConvert.SerializeObject(currentuser), options);
         return RedirectToAction(nameof(Profile));
+    }
+
+    public async Task<IActionResult> Logout()
+    {
+        await _signInManager.SignOutAsync();
+        Response.Cookies.Delete("CURRENT_USER");
+        return RedirectToAction(nameof(Login));
     }
 }

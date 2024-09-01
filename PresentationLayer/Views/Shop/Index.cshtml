@@ -1,4 +1,4 @@
-﻿@model List<Product>
+﻿@model List<ProductViewModel>
 <div class="ps-breadcrumb">
     <div class="ps-container">
         <ul class="breadcrumb">
@@ -533,12 +533,12 @@
                                                     <ul class="ps-product__actions">
                                                         <li><a href="#" data-toggle="tooltip" data-placement="top" title="Səbətə at"><i class="icon-bag2"></i></a></li>
                                                         <li><a href="#" data-placement="top" title="Sürətli bax" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="top" title="Sevimlilərə artır"><i class="icon-heart"></i></a></li>
+                                                        <li><a asp-action="addwishlist" asp-route-id="@item.Id" data-toggle="tooltip" data-placement="top" title="@(item.IsInWishlist ? "Sevimlilərdən çıxart" : "Sevimlilərə artır")"><i class="@(item.IsInWishlist ? "fas fa-heart" : "icon-heart")"></i></a></li>
                                                         @* <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li> *@
                                                     </ul>
                                                 </div>
                                                 <div class="ps-product__container">
-                                                    <a class="ps-product__vendor" href="#">@item.Category.Name</a>
+                                                    <a class="ps-product__vendor" href="#">@item.CategoryName</a>
                                                     <div class="ps-product__content">
                                                         <a class="ps-product__title" href="product-default.html">@item.Name</a>
                                                         <p class="ps-product__price">$@item.Price</p>
@@ -586,7 +586,7 @@
                                             <div class="ps-product__shopping">
                                                 <p class="ps-product__price">$@item.Price</p><a class="ps-btn" href="#">Səbətə at</a>
                                                 <ul class="ps-product__actions">
-                                                    <li><a href="#"><i class="icon-heart"></i> Sevimlilər</a></li>
+                                                    <li><a asp-action="addwishlist" asp-route-id="@item.Id"><i class="@(item.IsInWishlist ? "fas fa-heart" : "icon-heart")"></i>@(item.IsInWishlist ? "Sevimlilərdən çıxart" : "Sevimlilərə artır")</a></li>
                                                     @* <li><a href="#"><i class="icon-chart-bars"></i> Compare</a></li> *@
                                                 </ul>
                                             </div>
