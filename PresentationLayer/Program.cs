@@ -44,6 +44,7 @@ public class Program
             options.Lockout.AllowedForNewUsers = true;
             options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(2);
             options.Lockout.MaxFailedAccessAttempts = 6;
+
         })
             .AddEntityFrameworkStores<SandalContext>()
             .AddDefaultTokenProviders();

@@ -63,12 +63,32 @@ public class ShopController : Controller
         return Json(jsonData); 
     }
 
+    public IActionResult GetProductDetails(int id)
+    {
+        var product = _productService.GetProductWithRelations(id);
+        if (product == null)
+        {
+            return NotFound();
+        }
+
+        return Json(new
+        {
+            Name = product.Name,
+            Price = product.Price,
+            Description = product.Description,
+            CategoryName = product.Category.Name,
+
+        });
+    }
+
     public async Task<IActionResult> Wishlist()
     {
         var user = JsonConvert.DeserializeObject<User>(Request.Cookies["CURRENT_USER"]);
         var favorites = await _context.UserFavoriteProducts
             .Where(x => x.UserId == user.Id)
-            .Select(x => x.Product)
+            .Include(u=>u.Product)
+            .ThenInclude(p=>p.Category)
+            .Select(e => e.Product)
             .ToListAsync();
         return View(favorites);
     }
@@ -101,4 +121,16 @@ public class ShopController : Controller
         await _context.SaveChangesAsync();
         return NoContent();
     }
+
+    public async Task<int> GetWishlistCount()
+    {
+        var user = JsonConvert.DeserializeObject<User>(Request.Cookies["CURRENT_USER"]);
+        string userId = user.Id;
+
+        var wishlistCount = await _context.UserFavoriteProducts
+            .CountAsync(uf => uf.UserId == userId);
+
+        return wishlistCount;
+    }
+
 }

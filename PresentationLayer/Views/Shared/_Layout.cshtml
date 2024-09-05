@@ -79,7 +79,7 @@
                 </div>
                 <div class="header__content-right">
                     <div class="header__actions">
-                        <a class="header__extra" asp-controller="shop" asp-action="wishlist"><i class="icon-heart"></i><span><i>0</i></span></a>
+                        <a class="header__extra wishlistlink" asp-controller="shop" asp-action="wishlist"><i class="icon-heart"></i><span><i>0</i></span></a>
                         <div class="ps-cart--mini">
                             <a class="header__extra" href="#"><i class="icon-bag2"></i><span><i>0</i></span></a>
                             <div class="ps-cart__content">
@@ -567,7 +567,8 @@
                             </div>
                             <h4 class="ps-product__price">$36.78 – $56.99</h4>
                             <div class="ps-product__desc">
-                                <p>Sold By:<a href="shop-default.html"><strong> Go Pro</strong></a></p>
+                                <p>Kateqoriya:<a href="#" class="ps-category-name"><strong> Go Pro</strong></a></p>
+                                <p class="description"></p>
                                 <ul class="ps-list--dot">
                                     <li> Unrestrained and portable active stereo speaker</li>
                                     <li> Free from the confines of wires and chords</li>
@@ -577,7 +578,7 @@
                                 </ul>
                             </div>
                             <div class="ps-product__shopping">
-                                <a class="ps-btn ps-btn--black" href="#">Add to cart</a><a class="ps-btn" href="#">Buy Now</a>
+                                <a class="ps-btn ps-btn--black" href="#">Səbətə at</a><a class="ps-btn" href="#">İndi al</a>
                                 <div class="ps-product__actions"><a href="#"><i class="icon-heart"></i></a><a href="#"><i class="icon-chart-bars"></i></a></div>
                             </div>
                         </div>
@@ -604,6 +605,16 @@
     <script src="~/Sandal/plugins/gmap3.min.js"></script>
     <!-- custom scripts-->
     <script src="~/Sandal/js/main.js"></script>
+    <script>
+        $.ajax({
+            url: '/shop/getwishlistcount',
+            type: 'GET',
+            success: function (data) {
+                $('.header__extra.wishlistlink span i').text(data);
+            }
+        });
+
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
     @await RenderSectionAsync("js", required: false)
 </body>

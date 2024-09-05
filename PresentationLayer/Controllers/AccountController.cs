@@ -78,6 +78,7 @@ public class AccountController : Controller
                     Expires = DateTime.Now.AddMonths(1)
                 };
 
+
                 Response.Cookies.Append("CURRENT_USER", JsonConvert.SerializeObject(user), options);
                 return Redirect(decodeUrl);
             }
@@ -146,6 +147,7 @@ public class AccountController : Controller
         };
 
         Response.Cookies.Append("CURRENT_USER", JsonConvert.SerializeObject(currentuser), options);
+
         return RedirectToAction(nameof(Profile));
     }
 

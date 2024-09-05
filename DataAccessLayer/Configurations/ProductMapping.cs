@@ -21,5 +21,8 @@ public class ProductMapping : BaseEntityMapping<Product>
             .WithMany(e => e.Products)
             .OnDelete(DeleteBehavior.Restrict)
             .HasForeignKey(e => e.CategoryId);
+
+        builder.Property(e => e.Description)
+            .HasMaxLength(255);
     }
 }
