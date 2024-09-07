@@ -16,4 +16,5 @@ public class Product : BaseEntity
     public int CategoryId { get; set; }
     public Category? Category { get; set; }
     public ICollection<UserFavoriteProduct>? UserFavorites { get; set; }
+    public ICollection<UserBasketProduct>? UserBaskets { get; set; }
 }

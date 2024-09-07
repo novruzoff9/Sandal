@@ -1,6 +1,8 @@
 using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
+using EntityLayer.DTOs.Product;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +43,29 @@ public class ProductService : IProductService
     public List<Product> GetAllWithRelations()
     {
         return _ProductRepository.GetAllWithRelations(false, "Category").ToList();
+    }
+
+    public List<Product> GetFilteredProducts(FilterProducts filter)
+    {
+        var filteredProducts = _ProductRepository.GetAll();
+        if (filter.Ratings != null && filter.Ratings.Any())
+        {
+            filteredProducts = filteredProducts.Where(p => filter.Ratings.Contains(Convert.ToInt32(decimal.Ceiling(p.Rating))));
+        }
+
+        //TODO: Product-a color artiandan sonra service
+        /*if (filter.Colors != null && filter.Colors.Any())
+        {
+            filteredProducts = filteredProducts.Where(p => filter.Colors.Any(c => c == p.Color.Name));
+        }*/
+
+        if (filter.MinPrice > 0 || filter.MaxPrice > 0)
+        {
+            filteredProducts = filteredProducts.Where(p => p.Price >= filter.MinPrice && p.Price <= filter.MaxPrice);
+        }
+
+        return filteredProducts.ToList();
+
     }
 
     public Product GetProductById(int id)

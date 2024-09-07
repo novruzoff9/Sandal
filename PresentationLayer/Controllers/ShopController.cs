@@ -2,6 +2,7 @@
 using BusinessLayer.Concrete;
 using DataAccessLayer.Context;
 using EntityLayer.Concrete;
+using EntityLayer.DTOs.Product;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis;
@@ -9,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using PresentationLayer.Models;
 using PresentationLayer.Models.Product;
+using System.Linq;
 
 namespace PresentationLayer.Controllers;
 
@@ -42,25 +44,14 @@ public class ShopController : Controller
         return View(products);
     }
 
-    public IActionResult ProductsByFilter(FilterProducts filter)
+    [HttpPost]
+    public IActionResult ProductsByFilter([FromBody] FilterProducts filter)
     {
         var products = _productService.GetAllWithRelations();
-        if(filter.CategoryName != null)
-        {
-            products = products.Where(x => x.Category.Name == filter.CategoryName).ToList();
-        }
-        if (filter.MinPrice > 0)
-        {
-            products = products.Where(x => x.Price > filter.MinPrice).ToList();
-        }
-        if (filter.MaxPrice > 0)
-        {
-            products = products.Where(x => x.Price < filter.MaxPrice).ToList();
-        }
+        var userId = JsonConvert.DeserializeObject<User>(Request.Cookies["CURRENT_USER"]).Id;
+        var filteredProducts = _productService.GetFilteredProducts(filter);
 
-        var jsonData = JsonConvert.SerializeObject(products);
-
-        return Json(jsonData); 
+        return Json(filteredProducts); 
     }
 
     public IActionResult GetProductDetails(int id)
@@ -77,7 +68,6 @@ public class ShopController : Controller
             Price = product.Price,
             Description = product.Description,
             CategoryName = product.Category.Name,
-
         });
     }
 
@@ -133,4 +123,5 @@ public class ShopController : Controller
         return wishlistCount;
     }
 
+    
 }

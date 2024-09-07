@@ -13,4 +13,5 @@ public class User : IdentityUser
     public DateOnly? BirthDay { get; set; }
     public string? Gender { get; set; }
     public ICollection<UserFavoriteProduct>? FavoriteProducts { get; set; }
+    public ICollection<UserBasketProduct>? BasketProducts { get; set; }
 }

@@ -19,3 +19,19 @@ public class UserFavoriteProductMapping : IEntityTypeConfiguration<UserFavoriteP
             .HasForeignKey(uf => uf.ProductId);
     }
 }
+
+public class UserBasketProductMapping : IEntityTypeConfiguration<UserBasketProduct>
+{
+    public void Configure(EntityTypeBuilder<UserBasketProduct> builder)
+    {
+        builder.HasKey(e => new { e.ProductId, e.UserId });
+
+        builder.HasOne(uf => uf.User)
+            .WithMany(u => u.BasketProducts)
+            .HasForeignKey(uf => uf.UserId);
+
+        builder.HasOne(uf => uf.Product)
+            .WithMany(u => u.UserBaskets)
+            .HasForeignKey(uf => uf.ProductId);
+    }
+}

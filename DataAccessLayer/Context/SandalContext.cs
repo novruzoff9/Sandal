@@ -22,6 +22,7 @@ public class SandalContext : IdentityDbContext<User, Role, string>
     public DbSet<Product> Products { get; set; }
     public DbSet<FAQ> FAQs { get; set; }
     public DbSet<UserFavoriteProduct> UserFavoriteProducts { get; set; }
+    public DbSet<UserBasketProduct> UserBasketProducts { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

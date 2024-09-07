@@ -1,4 +1,5 @@
 using EntityLayer.Concrete;
+using EntityLayer.DTOs.Product;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,5 +19,6 @@ public interface IProductService
 
     List<Product> GetAllWithRelations();
     Product GetProductWithRelations(int id);
+    public List<Product> GetFilteredProducts(FilterProducts filter);
 }
 

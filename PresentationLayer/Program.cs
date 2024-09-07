@@ -52,6 +52,10 @@ public class Program
         builder.Services.AddAuthentication()
             .AddCookie(options =>
             {
+                options.ExpireTimeSpan = TimeSpan.FromDays(10);
+                options.SlidingExpiration = true;
+                options.Cookie.IsEssential = true;
+                options.Cookie.HttpOnly = true;
                 options.LoginPath = "/account/login";
                 options.AccessDeniedPath = "/account/accessdenied";
             });
