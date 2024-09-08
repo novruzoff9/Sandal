@@ -1,26 +1,24 @@
-﻿@model IEnumerable<Category>
-
-
+﻿@model List<Category>
 
 @foreach (var item in Model)
 {
     if (item.ParentCategoryId == null && item.SubCategories == null)
     {
         <li>
-            <a href="#.html">@item.Name</a>
+            <a href="/shop/index?categoryname=@item.Id.ToString().Encrypt()">@item.Name</a>
         </li>
     }
     else if (item.SubCategories?.Any() == true)
     {
         <li class="menu-item-has-children has-mega-menu">
-            <a href="#">@item.Name</a><span class="sub-toggle"></span>
+            <a href="/shop/index?categoryname=@item.Id.ToString().Encrypt()">@item.Name</a><span class="sub-toggle"></span>
             <div class="mega-menu">
                 <div class="mega-menu__column">
                     <ul class="mega-menu__list">
                         @foreach (var subcategory in item.SubCategories)
                         {
                             <li>
-                                <a href="#.html">@subcategory.Name</a>
+                                <a href="/shop/index?categoryname=@subcategory.Id.ToString().Encrypt()">@subcategory.Name</a>
                             </li>
                         }
                     </ul>

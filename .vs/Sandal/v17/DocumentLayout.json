@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{792254DC-0AA0-4D38-A03D-4EE87D344CD6}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\novruzoff\\source\\repos\\sandal\\businesslayer\\concrete\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{792254DC-0AA0-4D38-A03D-4EE87D344CD6}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\concrete\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\novruzoff\\source\\repos\\sandal\\presentationlayer\\views\\shop\\_filterpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\views\\shop\\_filterpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{620B14E7-C588-4B69-B941-1A3C7643AC31}|EntityLayer\\EntityLayer.csproj|c:\\users\\novruzoff\\source\\repos\\sandal\\entitylayer\\dtos\\product\\filterproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{620B14E7-C588-4B69-B941-1A3C7643AC31}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\dtos\\product\\filterproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\novruzoff\\source\\repos\\sandal\\presentationlayer\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\novruzoff\\source\\repos\\sandal\\presentationlayer\\views\\shared\\components\\catalog\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\views\\shared\\components\\catalog\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\novruzoff\\source\\repos\\sandal\\presentationlayer\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\novruzoff\\source\\repos\\sandal\\presentationlayer\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,60 +26,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FilterProducts.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\EntityLayer\\DTOs\\Product\\FilterProducts.cs",
-              "RelativeDocumentMoniker": "EntityLayer\\DTOs\\Product\\FilterProducts.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\EntityLayer\\DTOs\\Product\\FilterProducts.cs",
-              "RelativeToolTip": "EntityLayer\\DTOs\\Product\\FilterProducts.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T22:14:05.913Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\BusinessLayer\\Concrete\\ProductService.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Concrete\\ProductService.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\BusinessLayer\\Concrete\\ProductService.cs",
-              "RelativeToolTip": "BusinessLayer\\Concrete\\ProductService.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAiwDMAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T22:12:54.628Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Views\\Shared\\Components\\Catalog\\Default.cshtml",
+              "RelativeDocumentMoniker": "PresentationLayer\\Views\\Shared\\Components\\Catalog\\Default.cshtml",
+              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Views\\Shared\\Components\\Catalog\\Default.cshtml",
+              "RelativeToolTip": "PresentationLayer\\Views\\Shared\\Components\\Catalog\\Default.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-08T18:17:16.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_FilterPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Views\\Shop\\_FilterPartial.cshtml",
+              "RelativeDocumentMoniker": "PresentationLayer\\Views\\Shop\\_FilterPartial.cshtml",
+              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Views\\Shop\\_FilterPartial.cshtml",
+              "RelativeToolTip": "PresentationLayer\\Views\\Shop\\_FilterPartial.cshtml",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAiwA4AAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-08T10:17:53.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Views\\Shop\\Index.cshtml",
               "RelativeDocumentMoniker": "PresentationLayer\\Views\\Shop\\Index.cshtml",
               "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Views\\Shop\\Index.cshtml",
               "RelativeToolTip": "PresentationLayer\\Views\\Shop\\Index.cshtml",
-              "ViewState": "AQIAAOsDAAAAAAAAAAAiwPQDAABUAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAAAFMAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-07T20:50:35.225Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ShopController.cs",
               "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Controllers\\ShopController.cs",
               "RelativeDocumentMoniker": "PresentationLayer\\Controllers\\ShopController.cs",
               "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Controllers\\ShopController.cs",
               "RelativeToolTip": "PresentationLayer\\Controllers\\ShopController.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAYwDMAAABLAAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAUwE0AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-07T20:37:08.129Z",
               "EditorCaption": ""

@@ -1,4 +1,6 @@
-﻿namespace PresentationLayer.Models.Product;
+﻿using EntityLayer.Concrete;
+
+namespace PresentationLayer.Models.Product;
 
 public class ProductViewModel
 {
@@ -9,3 +11,8 @@ public class ProductViewModel
     public bool IsInWishlist { get; set; }
 }
 
+public class ShopViewModel
+{
+    public List<ProductViewModel> Products { get; set; }
+    public List<Category> Categories { get; set; }
+}

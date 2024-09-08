@@ -1,4 +1,5 @@
 using BusinessLayer.Abstract;
+using BusinessLayer.Helpers;
 using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
 using Microsoft.Extensions.Caching.Memory;
@@ -57,6 +58,11 @@ public class CategoryService : ICategoryService
     public Category GetCategoryById(int id)
     {
         return _CategoryRepository.GetById(id);
+    }
+
+    public Category GetCategoryHashId(string hashId)
+    {
+        return _CategoryRepository.GetByFilter(x => x.Id == Convert.ToInt32(hashId.Decrypt()));
     }
 
     public Category GetCategoryWithRelations(int id)

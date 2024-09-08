@@ -14,4 +14,6 @@ public class FilterProducts
     public decimal MinPrice { get; set; } = 0;
     public decimal MaxPrice { get; set; } = 0;
     public List<int>? Ratings { get; set; } = null;
+    public string? OrderBy { get; set; }
+    public int Page { get; set; }
 }

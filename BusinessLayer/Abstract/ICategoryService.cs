@@ -13,6 +13,8 @@ public interface ICategoryService
     void UpdateCategory(Category entity);
     void DeleteCategory(Category entity);
     Category GetCategoryById(int id);
+    //Category GetCategoryByName(string name);
+    Category GetCategoryHashId(string hashId);
     List<Category> GetAllCategory();
     Task<List<Category>> GetAllCategoryAsync();
 

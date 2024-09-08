@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using EntityLayer.Concrete;
+using EntityLayer.DTOs.Category;
 using EntityLayer.DTOs.User;
 using System;
 using System.Collections.Generic;
@@ -17,5 +18,7 @@ public class AutoMapperProfile : Profile
         CreateMap<User, UserCreateDto>().ReverseMap();
         CreateMap<User, UserListDto>().ReverseMap();
         CreateMap<User, UserDetailsDto>().ReverseMap();
+
+        CreateMap<Category, CategoryViewDto>().ReverseMap();
     }
 }

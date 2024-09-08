@@ -1,0 +1,163 @@
+﻿@model IEnumerable<Category>
+<div class="ps-layout__left">
+    <aside class="widget widget_shop">
+        <h4 class="widget-title">Kateqoriyalar</h4>
+        <ul class="ps-list--categories">
+
+            @foreach (var item in Model)
+            {
+                if(item.SubCategories == null && item.ParentCategory == null)
+                {
+                    <li>
+                        <a href="/shop/index?categoryname=@item.Id.ToString().Encrypt()">@item.Name</a>
+                    </li>
+                }
+                else if (item.SubCategories?.Any() == true)
+                {
+                    <li class="menu-item-has-children">
+                        <a href="/shop/index?categoryname=@item.Id.ToString().Encrypt()">@item.Name</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                        <ul class="sub-menu">
+                            @foreach (var subitem in item.SubCategories)
+                            {
+                                <li>
+                                    <a href="/shop/index?categoryname=@subitem.Id.ToString().Encrypt()">
+                                        @subitem.Name
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </li>
+                }
+            }
+
+            
+            
+        </ul>
+    </aside>
+    <aside class="widget widget_shop">
+        <h4 class="widget-title">İstehsalçı</h4>
+        <form class="ps-form--widget-search" action="do_action" method="get">
+            <input class="form-control" type="text" placeholder="">
+            <button><i class="icon-magnifier"></i></button>
+        </form>
+        <figure class="ps-custom-scrollbar" data-height="250">
+            <div class="ps-checkbox">
+                <input class="form-control" type="checkbox" id="brand-1" name="brand" />
+                <label for="brand-1">Adidas (3)</label>
+            </div>
+            <div class="ps-checkbox">
+                <input class="form-control" type="checkbox" id="brand-2" name="brand" />
+                <label for="brand-2">Amcrest (1)</label>
+            </div>
+            <div class="ps-checkbox">
+                <input class="form-control" type="checkbox" id="brand-3" name="brand" />
+                <label for="brand-3">Apple (2)</label>
+            </div>
+            <div class="ps-checkbox">
+                <input class="form-control" type="checkbox" id="brand-4" name="brand" />
+                <label for="brand-4">Asus (19)</label>
+            </div>
+            <div class="ps-checkbox">
+                <input class="form-control" type="checkbox" id="brand-5" name="brand" />
+                <label for="brand-5">Baxtex (20)</label>
+            </div>
+            <div class="ps-checkbox">
+                <input class="form-control" type="checkbox" id="brand-6" name="brand" />
+                <label for="brand-6">Adidas (11)</label>
+            </div>
+            <div class="ps-checkbox">
+                <input class="form-control" type="checkbox" id="brand-7" name="brand" />
+                <label for="brand-7">Casio (9)</label>
+            </div>
+            <div class="ps-checkbox">
+                <input class="form-control" type="checkbox" id="brand-8" name="brand" />
+                <label for="brand-8">Electrolux (0)</label>
+            </div>
+            <div class="ps-checkbox">
+                <input class="form-control" type="checkbox" id="brand-9" name="brand" />
+                <label for="brand-9">Gallaxy (0)</label>
+            </div>
+            <div class="ps-checkbox">
+                <input class="form-control" type="checkbox" id="brand-10" name="brand" />
+                <label for="brand-10">Samsung (0)</label>
+            </div>
+            <div class="ps-checkbox">
+                <input class="form-control" type="checkbox" id="brand-11" name="brand" />
+                <label for="brand-11">Sony (0)</label>
+            </div>
+        </figure>
+        <figure>
+            <h4 class="widget-title">Qiymət</h4>
+            <div id="nonlinear"></div>
+            <p class="ps-slider__meta">Qiymət:<span class="ps-slider__value">$<span class="ps-slider__min"></span></span>-<span class="ps-slider__value">$<span class="ps-slider__max"></span></span></p>
+        </figure>
+        <figure>
+            <h4 class="widget-title">Reytinq</h4>
+            <div class="ps-checkbox">
+                <input class="form-control" type="checkbox" id="review-1" name="review" value="5">
+                <label for="review-1"><span><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i></span><small>(13)</small></label>
+            </div>
+            <div class="ps-checkbox">
+                <input class="form-control" type="checkbox" id="review-2" name="review" value="4">
+                <label for="review-2"><span><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star"></i></span><small>(13)</small></label>
+            </div>
+            <div class="ps-checkbox">
+                <input class="form-control" type="checkbox" id="review-3" name="review" value="3">
+                <label for="review-3"><span><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span><small>(5)</small></label>
+            </div>
+            <div class="ps-checkbox">
+                <input class="form-control" type="checkbox" id="review-4" name="review" value="2">
+                <label for="review-4"><span><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span><small>(5)</small></label>
+            </div>
+            <div class="ps-checkbox">
+                <input class="form-control" type="checkbox" id="review-5" name="review" value="1">
+                <label for="review-5"><span><i class="fa fa-star rate"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span><small>(1)</small></label>
+            </div>
+        </figure>
+        <figure>
+            <h4 class="widget-title">Rəng</h4>
+            <div class="ps-checkbox ps-checkbox--color color-1 ps-checkbox--inline">
+                <input class="form-control" type="checkbox" id="color-1" name="color" value="black" />
+                <label for="color-1"></label>
+            </div>
+            <div class="ps-checkbox ps-checkbox--color color-2 ps-checkbox--inline">
+                <input class="form-control" type="checkbox" id="color-2" name="color" value="blue" />
+                <label for="color-2"></label>
+            </div>
+            <div class="ps-checkbox ps-checkbox--color color-3 ps-checkbox--inline">
+                <input class="form-control" type="checkbox" id="color-3" name="color" value="orange" />
+                <label for="color-3"></label>
+            </div>
+            <div class="ps-checkbox ps-checkbox--color color-4 ps-checkbox--inline">
+                <input class="form-control" type="checkbox" id="color-4" name="color" value="aqua" />
+                <label for="color-4"></label>
+            </div>
+            <div class="ps-checkbox ps-checkbox--color color-5 ps-checkbox--inline">
+                <input class="form-control" type="checkbox" id="color-5" name="color" value="yellow" />
+                <label for="color-5"></label>
+            </div>
+            <div class="ps-checkbox ps-checkbox--color color-6 ps-checkbox--inline">
+                <input class="form-control" type="checkbox" id="color-6" name="color" value="green" />
+                <label for="color-6"></label>
+            </div>
+            <div class="ps-checkbox ps-checkbox--color color-7 ps-checkbox--inline">
+                <input class="form-control" type="checkbox" id="color-7" name="color" value="gray" />
+                <label for="color-7"></label>
+            </div>
+            <div class="ps-checkbox ps-checkbox--color color-8 ps-checkbox--inline">
+                <input class="form-control" type="checkbox" id="color-8" name="color" value="white" />
+                <label for="color-8"></label>
+            </div>
+        </figure>
+        @* <figure class="sizes">
+        <h4 class="widget-title">Ölçü</h4>
+        <a href="#">L</a>
+        <a href="#">M</a>
+        <a href="#">S</a>
+        <input type="checkbox">XL</input>
+        </figure> *@
+        <figure>
+            <button onclick="LoadProducts()" class="w-100 btn btn-primary">Axtar</button>
+        </figure>
+    </aside>
+</div>

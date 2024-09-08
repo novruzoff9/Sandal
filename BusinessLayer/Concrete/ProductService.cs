@@ -47,7 +47,7 @@ public class ProductService : IProductService
 
     public List<Product> GetFilteredProducts(FilterProducts filter)
     {
-        var filteredProducts = _ProductRepository.GetAll();
+        var filteredProducts = _ProductRepository.GetAllWithRelations(false, "Category");
         if (filter.Ratings != null && filter.Ratings.Any())
         {
             filteredProducts = filteredProducts.Where(p => filter.Ratings.Contains(Convert.ToInt32(decimal.Ceiling(p.Rating))));
@@ -64,6 +64,18 @@ public class ProductService : IProductService
             filteredProducts = filteredProducts.Where(p => p.Price >= filter.MinPrice && p.Price <= filter.MaxPrice);
         }
 
+        if (filter.OrderBy != null)
+        {
+            filteredProducts = filter.OrderBy switch
+            {
+                "bydate" => filteredProducts.OrderBy(p=>p.Id),
+                //"byselling" => filteredProducts.OrderBy()
+                "byrating" => filteredProducts.OrderBy(p => p.Rating),
+                "lowest" => filteredProducts.OrderBy(p => p.Price),
+                "highest" => filteredProducts.OrderBy(p => p.Price).Reverse(),
+                _ => filteredProducts
+            };
+        }
         return filteredProducts.ToList();
 
     }

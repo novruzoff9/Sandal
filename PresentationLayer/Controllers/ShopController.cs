@@ -17,41 +17,105 @@ namespace PresentationLayer.Controllers;
 public class ShopController : Controller
 {
     private readonly IProductService _productService;
+    private readonly ICategoryService _categoryService;
     private readonly UserManager<User> _userManager;
     private readonly SandalContext _context;
 
-    public ShopController(IProductService productService, UserManager<User> userManager, SandalContext context)
+    public ShopController(IProductService productService, UserManager<User> userManager, SandalContext context, ICategoryService categoryService)
     {
         _productService = productService;
         _userManager = userManager;
         _context = context;
+        _categoryService = categoryService;
     }
 
-    public IActionResult Index()
+    public IActionResult Index([FromQuery] string? categoryName)
     {
         var user = JsonConvert.DeserializeObject<User>(Request.Cookies["CURRENT_USER"]);
         string userId = user.Id;
         var products = _productService.GetAllWithRelations()
-            .Select(p=> new ProductViewModel
+            .ToList();
+
+        var categoryIds = new List<int>();
+
+        if (categoryName != null)
+        {
+            var selectedCategory = _categoryService.GetCategoryHashId(categoryName);
+            categoryIds.Add(selectedCategory.Id);
+            var subcategoryIds = _categoryService.GetAllCategory()
+                .Where(x => x.ParentCategoryId == selectedCategory.Id)
+                .Select(x => x.Id)
+                .ToList();
+
+            categoryIds.AddRange(subcategoryIds);
+
+
+            products = products.Where(x => categoryIds.Contains(x.CategoryId))
+                .ToList();
+        }
+
+        var productsvm = products
+            .Select(p => new ProductViewModel
             {
                 Id = p.Id,
                 Name = p.Name,
                 CategoryName = p.Category.Name,
                 Price = p.Price,
-                IsInWishlist = _context.UserFavoriteProducts.Any(x=>x.ProductId == p.Id && x.UserId == userId)
+                IsInWishlist = _context.UserFavoriteProducts.Any(x => x.ProductId == p.Id && x.UserId == userId)
             })
             .ToList();
-        return View(products);
+
+        ShopViewModel shopViewModel = new()
+        {
+            Categories = _categoryService.GetAllCategory(),
+            Products = productsvm
+        };
+        return View(shopViewModel);
+    }
+
+    public IActionResult FilterPartial()
+    {
+        return PartialView();
     }
 
     [HttpPost]
-    public IActionResult ProductsByFilter([FromBody] FilterProducts filter)
+    public IActionResult ProductsByFilter([FromBody] FilterProducts filter, string? categoryName)
     {
-        var products = _productService.GetAllWithRelations();
         var userId = JsonConvert.DeserializeObject<User>(Request.Cookies["CURRENT_USER"]).Id;
-        var filteredProducts = _productService.GetFilteredProducts(filter);
+        var filteredProducts = _productService
+            .GetFilteredProducts(filter);
 
-        return Json(filteredProducts); 
+
+        var categoryIds = new List<int>();
+
+        if (categoryName != null)
+        {
+            var selectedCategory = _categoryService.GetCategoryHashId(categoryName);
+            categoryIds.Add(selectedCategory.Id);
+            var subcategoryIds = _categoryService.GetAllCategory()
+                .Where(x => x.ParentCategoryId == selectedCategory.Id)
+                .Select(x => x.Id)
+                .ToList();
+
+            categoryIds.AddRange(subcategoryIds);
+
+
+            filteredProducts = filteredProducts.Where(x => categoryIds.Contains(x.CategoryId))
+                .ToList();
+        }
+
+        var filteredProductsVM = filteredProducts
+            .Select(p => new ProductViewModel
+            {
+                Id = p.Id,
+                Name = p.Name,
+                CategoryName = p.Category.Name,
+                Price = p.Price,
+                IsInWishlist = _context.UserFavoriteProducts.Any(x => x.ProductId == p.Id && x.UserId == userId)
+            })
+         .ToList();
+
+        return Json(filteredProductsVM);
     }
 
     public IActionResult GetProductDetails(int id)
@@ -76,8 +140,8 @@ public class ShopController : Controller
         var user = JsonConvert.DeserializeObject<User>(Request.Cookies["CURRENT_USER"]);
         var favorites = await _context.UserFavoriteProducts
             .Where(x => x.UserId == user.Id)
-            .Include(u=>u.Product)
-            .ThenInclude(p=>p.Category)
+            .Include(u => u.Product)
+            .ThenInclude(p => p.Category)
             .Select(e => e.Product)
             .ToListAsync();
         return View(favorites);
@@ -123,5 +187,5 @@ public class ShopController : Controller
         return wishlistCount;
     }
 
-    
+
 }
