@@ -5,7 +5,7 @@
             <li><a asp-route="/">Əsas</a></li>
             <li><a href="shop-default.html">Consumer Electrics</a></li>
             <li><a href="shop-default.html">Refrigerators</a></li>
-            <li>Marshall Kilburn Portable Wireless Speaker</li>
+            <li>@Model.Name</li>
         </ul>
     </div>
 </div>
@@ -19,15 +19,15 @@
                             <figure>
                                 <div class="ps-wrapper">
                                     <div class="ps-product__gallery" data-arrow="true">
-                                        <div class="item"><a href="~/Sandal/img/products/detail/fullwidth/1.jpg"><img src="~/Sandal/img/products/detail/fullwidth/1.jpg" alt=""></a></div>
+                                        <div class="item"><a href="~/Sandal/img/products/detail/fullwidth/1.jpg"><img src="@Model.ImageUrl" alt=""></a></div>
                                         <div class="item"><a href="~/Sandal/img/products/detail/fullwidth/2.jpg"><img src="~/Sandal/img/products/detail/fullwidth/2.jpg" alt=""></a></div>
                                         <div class="item"><a href="~/Sandal/img/products/detail/fullwidth/3.jpg"><img src="~/Sandal/img/products/detail/fullwidth/3.jpg" alt=""></a></div>
                                     </div>
                                 </div>
                             </figure>
                             <div class="ps-product__variants" data-item="4" data-md="4" data-sm="4" data-arrow="false">
-                                <div class="item"><img src="~/Sandal/img/products/detail/fullwidth/1.jpg" alt=""></div>
-                                <div class="item"><img src="~/Sandal/img/products/detail/fullwidth/2.jpg" alt=""></div>
+                                <div class="item"><img src="@Model.ImageUrl" alt=""></div>
+                                <div class="item"><img src="@Model.ImageUrl" alt=""></div>
                                 <div class="item"><img src="~/Sandal/img/products/detail/fullwidth/3.jpg" alt=""></div>
                             </div>
                         </div>
@@ -58,27 +58,27 @@
                             </div>
                             <div class="ps-product__variations">
                                 <figure>
-                                    <figcaption>Color</figcaption>
+                                    <figcaption>Rəng</figcaption>
                                     <div class="ps-variant ps-variant--color color--1"><span class="ps-variant__tooltip">Black</span></div>
                                     <div class="ps-variant ps-variant--color color--2"><span class="ps-variant__tooltip"> Gray</span></div>
                                 </figure>
                             </div>
                             <div class="ps-product__shopping">
                                 <figure>
-                                    <figcaption>Quantity</figcaption>
+                                    <figcaption>Say</figcaption>
                                     <div class="form-group--number">
                                         <button class="up"><i class="fa fa-plus"></i></button>
                                         <button class="down"><i class="fa fa-minus"></i></button>
-                                        <input class="form-control" type="text" placeholder="1">
+                                        <input id="productquantityinput" class="form-control" type="text" placeholder="1">
                                     </div>
                                 </figure><a class="ps-btn ps-btn--black" href="#">Səbətə at</a><a class="ps-btn" href="#">İndi al</a>
                                 <div class="ps-product__actions"><a asp-action="addwishlist" asp-controller="shop" asp-route-id="@Model.Id" data-toggle="tooltip" data-placement="top" title="@(Model.Rating > 0 ? "Sevimlilərdən çıxart" : "Sevimlilərə artır")"><i class="@(Model.Rating > 0 ? "fas fa-heart" : "icon-heart")"></i></a></div>
                             </div>
                             <div class="ps-product__specification">
                                 <a class="report" href="#">Report Abuse</a>
-                                <p><strong>SKU:</strong> SF1133569600-1</p>
-                                <p class="categories"><strong> Categories:</strong><a href="#">Consumer Electronics</a>,<a href="#"> Refrigerator</a>,<a href="#">Babies & Moms</a></p>
-                                <p class="tags"><strong> Tags</strong><a href="#">sofa</a>,<a href="#">technologies</a>,<a href="#">wireless</a></p>
+                                <p><strong>Kodu:</strong> SF1133569600-1</p>
+                                <p class="categories"><strong> Kateqoriyası:</strong><a href="#">Consumer Electronics</a>,<a href="#"> Refrigerator</a>,<a href="#">Babies & Moms</a></p>
+                                <p class="tags"><strong> Etiketlər</strong><a href="#">sofa</a>,<a href="#">technologies</a>,<a href="#">wireless</a></p>
                             </div>
                             <div class="ps-product__sharing"><a class="facebook" href="#"><i class="fa fa-facebook"></i></a><a class="twitter" href="#"><i class="fa fa-twitter"></i></a><a class="google" href="#"><i class="fa fa-google-plus"></i></a><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></div>
                         </div>
@@ -213,9 +213,9 @@
                             </div>
                             <div class="ps-tab" id="tab-5">
                                 <div class="ps-block--questions-answers">
-                                    <h3>Questions and Answers</h3>
+                                    <h3>Suallar və Cavablar</h3>
                                     <div class="form-group">
-                                        <input class="form-control" type="text" placeholder="Have a question? Search for answer?">
+                                        <input class="form-control" type="text" placeholder="Sualınızı bura qeyd edin">
                                     </div>
                                 </div>
                             </div>
@@ -228,13 +228,13 @@
             </div>
             <div class="ps-page__right">
                 <aside class="widget widget_product widget_features">
-                    <p><i class="icon-network"></i> Shipping worldwide</p>
-                    <p><i class="icon-3d-rotate"></i> Free 7-day return if eligible, so easy</p>
+                    <p><i class="icon-network"></i> Ölkə üzrə çatdırılma</p>
+                    <p><i class="icon-3d-rotate"></i> 2 saat müddətində pulsuz geri qaytarılma</p>
                     <p><i class="icon-receipt"></i> Supplier give bills for this product.</p>
-                    <p><i class="icon-credit-card"></i> Pay online or when receiving goods</p>
+                    <p><i class="icon-credit-card"></i> Onlayn və ya təgbil alarkən ödəniş</p>
                 </aside>
                 <aside class="widget widget_sell-on-site">
-                    <p><i class="icon-store"></i> Sell on Martfury?<a href="#"> Register Now !</a></p>
+                    <p><i class="icon-store"></i> Sandal da kirayələmək istəyirsən?<a asp-controller="account" asp-action="login"> Qeydiyyatdan keç!</a></p>
                 </aside>
                 <aside class="widget widget_ads"><a href="#"><img src="~/Sandal/img/ads/product-ads.png" alt=""></a></aside>
                 <aside class="widget widget_same-brand">
@@ -813,3 +813,28 @@
         </div>
     </div>
 </div>
+
+@section js{
+    <script>
+        document.querySelector('.up').addEventListener('click', function () {
+            var input = document.querySelector('#productquantityinput');
+            var currentValue = parseInt(input.value);
+            if (!isNaN(currentValue)) {
+                input.value = currentValue + 1;
+            } else {
+                input.value = 1; 
+            }
+        });
+
+        document.querySelector('.down').addEventListener('click', function () {
+            var input = document.querySelector('#productquantityinput');
+            var currentValue = parseInt(input.value);
+            if (!isNaN(currentValue) && currentValue > 1) {
+                input.value = currentValue - 1; 
+            } else {
+                input.value = 1; 
+            }
+        });
+
+    </script>
+}

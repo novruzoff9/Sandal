@@ -83,6 +83,10 @@ public class ProductsController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Edit(int id, Product product, IFormFile file)
     {
+        if (!ModelState.IsValid)
+        {
+            return View(product);
+        }
         if (id != product.Id)
         {
             return NotFound();
