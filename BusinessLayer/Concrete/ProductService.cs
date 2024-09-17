@@ -2,6 +2,7 @@ using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
 using EntityLayer.DTOs.Product;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -13,11 +14,35 @@ namespace BusinessLayer.Concrete;
 
 public class ProductService : IProductService
 {
-    private readonly IProductRepository _ProductRepository;
+    private readonly IProductRepository _ProductRepository; 
+    private readonly string _uploadFolderPath;
 
     public ProductService(IProductRepository ProductRepository)
     {
         _ProductRepository = ProductRepository;
+        _uploadFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "upload", "products");
+    }
+
+    public async Task<Product> AddImage(Product entity, IFormFile file)
+    {
+        string fileName = $"{Guid.NewGuid()}_{Path.GetFileName(file.FileName)}";
+        var path = Path.Combine(_uploadFolderPath, fileName);
+
+        try
+        {
+            Directory.CreateDirectory(_uploadFolderPath);
+            await using (var stream = new FileStream(path, FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
+        }
+        catch (Exception ex)
+        {
+            throw new ArgumentException($"An error occurred while uploading the image: {ex.Message}");
+        }
+
+        entity.ImageUrl = $"http://localhost:5259/upload/products/{fileName}";
+        return entity;
     }
 
     public void CreateProduct(Product entity)

@@ -61,6 +61,7 @@ public class ShopController : Controller
                 Name = p.Name,
                 CategoryName = p.Category.Name,
                 Price = p.Price,
+                ImageUrl = p.ImageUrl,
                 IsInWishlist = _context.UserFavoriteProducts.Any(x => x.ProductId == p.Id && x.UserId == userId)
             })
             .ToList();
