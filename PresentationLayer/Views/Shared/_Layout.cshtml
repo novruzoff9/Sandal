@@ -116,6 +116,10 @@
                                 else
                                 {
                                     <a asp-controller="account" asp-action="profile">Profilim</a>
+                                    if (await UserManager.IsInRoleAsync(UserManager.GetUserAsync(Context.User).Result, "vendor"))
+                                    {
+                                        <a asp-area="vendor" asp-controller="products" asp-action="index">İcarəçi</a>
+                                    }
                                 }
                             </div>
                         </div>
@@ -145,7 +149,7 @@
                         <li class="menu-item"><a asp-controller="about" asp-action="index">Haqqımızda</a></li>
                         <li class="menu-item"><a asp-controller="contact" asp-action="index">Əlaqə</a></li>
                         <li class="menu-item"><a asp-controller="about" asp-action="faqs">Tez-Tez soruşulanlar</a></li>
-                        <li class="menu-item-has-children">
+                        @* <li class="menu-item-has-children">
                             <a href="index.html">Qaydalar</a><span class="sub-toggle"></span>
                             <ul class="sub-menu">
                                 <li>
@@ -158,10 +162,10 @@
                                     <a href="become-a-vendor.html">İcarə götürən üçün</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> *@
                     </ul>
                     <div class="ps-block--header-hotline inline">
-                        <p><i class="icon-telephone"></i>Qaynar xətt:<strong> *4242</strong></p>
+                        <p><i class="icon-telephone"></i>Qaynar xətt:<strong> +994703108088</strong></p>
                     </div>
                 </div>
             </div>

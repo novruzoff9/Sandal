@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using System.Security.Claims;
 
 namespace PresentationLayer.Controllers;
 
@@ -12,24 +13,28 @@ public class BasketController : Controller
 {
     private readonly IProductService _productService;
     private readonly UserManager<User> _userManager;
+    private readonly RoleManager<Role> _roleManager;
     private readonly SandalContext _context;
 
-    public BasketController(IProductService productService, UserManager<User> userManager, SandalContext context)
+    public BasketController(IProductService productService, UserManager<User> userManager, SandalContext context, RoleManager<Role> roleManager)
     {
         _productService = productService;
         _userManager = userManager;
         _context = context;
+        _roleManager = roleManager;
     }
 
     public async Task<IActionResult> Index()
     {
-        var user = JsonConvert.DeserializeObject<User>(Request.Cookies["CURRENT_USER"]);
+        var currentuser = JsonConvert.DeserializeObject<User>(Request.Cookies["CURRENT_USER"]);
+        var user = await _userManager.FindByIdAsync(currentuser.Id);
         var basketitems = await _context.UserBasketProducts
             .Where(x => x.UserId == user.Id)
             .Include(u => u.Product)
             .ThenInclude(p => p.Category)
             .Select(e => e.Product)
             .ToListAsync();
+
         return View(basketitems);
     }
 

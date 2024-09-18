@@ -793,3 +793,4 @@ C:\Users\Novruzoff\source\repos\Sandal\PresentationLayer\obj\Debug\net8.0\refint
 C:\Users\Novruzoff\source\repos\Sandal\PresentationLayer\obj\Debug\net8.0\PresentationLayer.pdb
 C:\Users\Novruzoff\source\repos\Sandal\PresentationLayer\obj\Debug\net8.0\PresentationLayer.genruntimeconfig.cache
 C:\Users\Novruzoff\source\repos\Sandal\PresentationLayer\obj\Debug\net8.0\ref\PresentationLayer.dll
+C:\Users\Novruzoff\source\repos\Sandal\PresentationLayer\obj\Debug\net8.0\scopedcss\Areas\Vendor\Views\Shared\_Layout.cshtml.rz.scp.css

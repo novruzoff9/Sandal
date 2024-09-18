@@ -94,6 +94,46 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Areas/Vendor/Views/Products/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVmVuZG9yXFZpZXdzXFByb2R1Y3RzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Areas/Vendor/Views/Products/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVmVuZG9yXFZpZXdzXFByb2R1Y3RzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Areas/Vendor/Views/Products/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVmVuZG9yXFZpZXdzXFByb2R1Y3RzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Areas/Vendor/Views/Products/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVmVuZG9yXFZpZXdzXFByb2R1Y3RzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Areas/Vendor/Views/Products/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVmVuZG9yXFZpZXdzXFByb2R1Y3RzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Areas/Vendor/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVmVuZG9yXFZpZXdzXFNoYXJlZFxFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Areas/Vendor/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVmVuZG9yXFZpZXdzXFNoYXJlZFxfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Areas/Vendor/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVmVuZG9yXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Areas/Vendor/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVmVuZG9yXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Views/About/BecomeVendor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcQmVjb21lVmVuZG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Views/About/FAQs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcRkFRcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -181,6 +221,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-yya7p4hp6p
+
+[C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Areas/Vendor/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVmVuZG9yXFZpZXdzXFNoYXJlZFxfTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-qu7jvq3zuv
 
 [C:/Users/Novruzoff/source/repos/Sandal/PresentationLayer/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s

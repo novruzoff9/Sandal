@@ -22,5 +22,10 @@ namespace PresentationLayer.Controllers
             var faqs = _faqService.GetAllFAQ();
             return View(faqs);
         }
+
+        public IActionResult BecomeVendor()
+        {
+            return View();
+        }
     }
 }

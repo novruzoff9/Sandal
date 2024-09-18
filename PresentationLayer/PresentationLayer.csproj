@@ -20,6 +20,8 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Vendor\Data\" />
+    <Folder Include="Areas\Vendor\Models\" />
     <Folder Include="wwwroot\admin\assets\img\" />
   </ItemGroup>
 
@@ -40,6 +42,20 @@
     <None Include="wwwroot\Sandal\plugins\sticky-sidebar\dist\sticky-sidebar.min.js" />
     <None Include="wwwroot\Sandal\plugins\YTPlayer\dist\jquery.mb.YTPlayer.js" />
     <None Include="wwwroot\Sandal\plugins\YTPlayer\dist\jquery.mb.YTPlayer.min.js" />
+    <None Include="wwwroot\vendor\assets\css\sass\AdminPanel.css.map" />
+    <None Include="wwwroot\vendor\assets\css\sass\AdminPanel.scss" />
+    <None Include="wwwroot\vendor\assets\css\sass\dashboard.css.map" />
+    <None Include="wwwroot\vendor\assets\css\sass\dashboard.scss" />
+    <None Include="wwwroot\vendor\assets\css\sass\partials\sections\_aside.scss" />
+    <None Include="wwwroot\vendor\assets\css\sass\partials\sections\_content.scss" />
+    <None Include="wwwroot\vendor\assets\css\sass\partials\sections\_header.scss" />
+    <None Include="wwwroot\vendor\assets\css\sass\partials\sections\_table.scss" />
+    <None Include="wwwroot\vendor\assets\css\sass\partials\_basics.scss" />
+    <None Include="wwwroot\vendor\assets\css\sass\partials\_variables.scss" />
+    <None Include="wwwroot\vendor\assets\js\Layout.js" />
+    <None Include="wwwroot\vendor\assets\js\Scroll.js" />
+    <None Include="wwwroot\vendor\assets\js\Slider.js" />
+    <None Include="wwwroot\vendor\assets\js\Table.js" />
   </ItemGroup>
 
   <ItemGroup>
@@ -51,7 +67,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.4" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.5" />
   </ItemGroup>
 
   <ItemGroup>
