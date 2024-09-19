@@ -1,4 +1,5 @@
 ﻿@model ShopViewModel
+
 <div class="ps-breadcrumb">
     <div class="ps-container">
         <ul class="breadcrumb">
@@ -85,7 +86,7 @@
                                 {
                                     <div class="ps-product ps-product--wide">
                                         <div class="ps-product__thumbnail">
-                                            <a href="product-default.html"><img src="~/Sandal/img/products/shop/1.jpg" alt="" /></a>
+                                            <a href="product-default.html"><img src="@item.ImageUrl" alt="" /></a>
                                         </div>
                                         <div class="ps-product__container">
                                             <div class="ps-product__content">
@@ -605,6 +606,31 @@
 @section js {
 
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var productImages = document.querySelectorAll('.ps-product__thumbnail img');
+
+            productImages.forEach(function (img) {
+                // Resmin yüklenmesini bekleyelim
+                img.addEventListener('load', function () {
+                    var desiredSize = 200; // Sabit genişlik ve yükseklik belirle
+                    img.style.objectFit = 'contain'; // Görüntünün tamamını sığdır (boşluklarla)
+                    img.style.width = desiredSize + 'px'; // Sabit genişlik
+                    img.style.height = desiredSize + 'px'; // Sabit yükseklik
+                    img.style.backgroundColor = '#f5f5f5'; // İsteğe bağlı: Boşluk arka plan rengi
+                });
+
+                // Görsel zaten yüklendiyse
+                if (img.complete) {
+                    img.dispatchEvent(new Event('load'));
+                }
+            });
+        });
+
+
+
+    </script>
+
+    <script>
         function LoadProducts() {
             var selectedreviews = [];
             var selectedcolors = [];
@@ -625,7 +651,7 @@
             const categoryName = urlParams.get('categoryname');
 
             let filterUrl = '/Shop/ProductsByFilter'
-            if(categoryName !== null){
+            if (categoryName !== null) {
                 filterUrl = '/Shop/ProductsByFilter?categoryname=' + categoryName;
             }
 
@@ -648,53 +674,53 @@
 
                     response.forEach(function (product) {
                         productListHtml += `
-                                        <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6">
-                                            <div class="ps-product">
-                                                <div class="ps-product__thumbnail">
-                                                    <a href="/product/details/${product.id}">
-                                                        <img src="/Sandal/img/products/shop/1.jpg" alt="${product.name}" />
-                                                    </a>
-                                                    <ul class="ps-product__actions">
-                                                        <li><a href="/basket/addbasket/${product.id}" data-toggle="tooltip" data-placement="top" title="Səbətə at"><i class="icon-bag2"></i></a></li>
-                                                        <li><a href="javascript:void(0)" class="quickview" data-id="${product.id}" data-placement="top" title="Sürətli bax" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
-                                                        <li><a href="/shop/addwishlist/${product.id}" data-toggle="tooltip" data-placement="top" title="${product.isInWishlist ? 'Sevimlilərdən çıxart' : 'Sevimlilərə artır'}"><i class="${product.isInWishlist ? 'fas fa-heart' : 'icon-heart'}"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="ps-product__container">
-                                                    <a class="ps-product__vendor" href="#">${product.categoryName}</a>
-                                                    <div class="ps-product__content">
-                                                        <a class="ps-product__title" href="/product/details/${product.id}">${product.name}</a>
-                                                        <p class="ps-product__price">₼${product.price}</p>
+                                                <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6">
+                                                    <div class="ps-product">
+                                                        <div class="ps-product__thumbnail">
+                                                            <a href="/product/details/${product.id}">
+                                                                <img src="/Sandal/img/products/shop/1.jpg" alt="${product.name}" />
+                                                            </a>
+                                                            <ul class="ps-product__actions">
+                                                                <li><a href="/basket/addbasket/${product.id}" data-toggle="tooltip" data-placement="top" title="Səbətə at"><i class="icon-bag2"></i></a></li>
+                                                                <li><a href="javascript:void(0)" class="quickview" data-id="${product.id}" data-placement="top" title="Sürətli bax" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                                                                <li><a href="/shop/addwishlist/${product.id}" data-toggle="tooltip" data-placement="top" title="${product.isInWishlist ? 'Sevimlilərdən çıxart' : 'Sevimlilərə artır'}"><i class="${product.isInWishlist ? 'fas fa-heart' : 'icon-heart'}"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="ps-product__container">
+                                                            <a class="ps-product__vendor" href="#">${product.categoryName}</a>
+                                                            <div class="ps-product__content">
+                                                                <a class="ps-product__title" href="/product/details/${product.id}">${product.name}</a>
+                                                                <p class="ps-product__price">₼${product.price}</p>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </div>`;
+                                                </div>`;
 
                         productListColumnHtml += `
-                                                <div class="ps-product ps-product--wide">
-                                                                <div class="ps-product__thumbnail">
-                                                                    <a href="product-default.html"><img src="/Sandal/img/products/shop/1.jpg" alt="" /></a>
-                                                                </div>
-                                                                <div class="ps-product__container">
-                                                                    <div class="ps-product__content">
-                                                                                <a class="ps-product__title" href="product-default.html">${product.name}</a>
-                                                                        <p class="ps-product__vendor">Sold by:<a href="#">ROBERT’S STORE</a></p>
-                                                                        <ul class="ps-product__desc">
-                                                                            <li> Unrestrained and portable active stereo speaker</li>
-                                                                            <li> Free from the confines of wires and chords</li>
-                                                                            <li> 20 hours of portable capabilities</li>
-                                                                            <li> Double-ended Coil Cord with 3.5mm Stereo Plugs Included</li>
-                                                                            <li> 3/4″ Dome Tweeters: 2X and 4″ Woofer: 1X</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="ps-product__shopping">
-                                                                                        <p class="ps-product__price">₼${product.price}</p><a class="ps-btn" asp-action="addbasket" href="/shop/addwishlist/${product.id}">Səbətə at</a>
-                                                                        <ul class="ps-product__actions">
-                                                                                                            <li><a href="/shop/addwishlist/${product.id}"><i class="${product.IsInWishlist ? "fas fa-heart" : "icon-heart"} "></i>${product.IsInWishlist ? "Sevimlilərdən çıxart" : "Sevimlilərə artır"}</a></li >
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>`
+                                                        <div class="ps-product ps-product--wide">
+                                                                        <div class="ps-product__thumbnail">
+                                                                            <a href="product-default.html"><img src="/Sandal/img/products/shop/1.jpg" alt="" /></a>
+                                                                        </div>
+                                                                        <div class="ps-product__container">
+                                                                            <div class="ps-product__content">
+                                                                                        <a class="ps-product__title" href="product-default.html">${product.name}</a>
+                                                                                <p class="ps-product__vendor">Sold by:<a href="#">ROBERT’S STORE</a></p>
+                                                                                <ul class="ps-product__desc">
+                                                                                    <li> Unrestrained and portable active stereo speaker</li>
+                                                                                    <li> Free from the confines of wires and chords</li>
+                                                                                    <li> 20 hours of portable capabilities</li>
+                                                                                    <li> Double-ended Coil Cord with 3.5mm Stereo Plugs Included</li>
+                                                                                    <li> 3/4″ Dome Tweeters: 2X and 4″ Woofer: 1X</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="ps-product__shopping">
+                                                                                                <p class="ps-product__price">₼${product.price}</p><a class="ps-btn" asp-action="addbasket" href="/shop/addwishlist/${product.id}">Səbətə at</a>
+                                                                                <ul class="ps-product__actions">
+                                                                                                                    <li><a href="/shop/addwishlist/${product.id}"><i class="${product.IsInWishlist ? "fas fa-heart" : "icon-heart"} "></i>${product.IsInWishlist ? "Sevimlilərdən çıxart" : "Sevimlilərə artır"}</a></li >
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>`
                     });
 
                     $('#product-list-row').html(productListHtml);

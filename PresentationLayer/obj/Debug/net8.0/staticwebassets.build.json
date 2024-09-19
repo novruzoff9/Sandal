@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iKgpiWkcjHnBWF9zbPbzUuRvsgMaveyV+6gDrxZHNQg=",
+  "Hash": "izAiIr+W0+Fhuhi7lHVb/UZWNwCVdOEJgbDS/H65/jY=",
   "Source": "PresentationLayer",
   "BasePath": "_content/PresentationLayer",
   "Mode": "Default",
@@ -16412,6 +16412,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\upload\\products\\4d8e292b-4742-420c-8d12-2856f7d09201_download.png"
+    },
+    {
+      "Identity": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\upload\\products\\650ce5ef-afb7-4f24-81c3-7e636f8a0bfb_Xbox X.png",
+      "SourceId": "PresentationLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\",
+      "BasePath": "_content/PresentationLayer",
+      "RelativePath": "upload/products/650ce5ef-afb7-4f24-81c3-7e636f8a0bfb_Xbox X.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\upload\\products\\650ce5ef-afb7-4f24-81c3-7e636f8a0bfb_Xbox X.png"
     },
     {
       "Identity": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\upload\\products\\80e39b15-758c-4532-a367-f087ef821a76_1984_George_orwell.jpg",

@@ -51,10 +51,11 @@ public class ProductsController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create([Bind("Name,Price,Rating,Description,ImageUrl,CategoryId,Id")] Product product)
+    public async Task<IActionResult> Create(Product product, IFormFile file)
     {
         if (ModelState.IsValid)
         {
+            product = await _productService.AddImage(product, file);
             _productService.CreateProduct(product);
             return RedirectToAction(nameof(Index));
         }
@@ -75,7 +76,7 @@ public class ProductsController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(int id, [Bind("Name,Price,Rating,Description,ImageUrl,CategoryId,Id")] Product product)
+    public async Task<IActionResult> Edit(int id, Product product, IFormFile file)
     {
         if (id != product.Id)
         {
@@ -86,6 +87,7 @@ public class ProductsController : Controller
         {
             try
             {
+                product = await _productService.AddImage(product, file);
                 _productService.UpdateProduct(product);
             }
             catch (DbUpdateConcurrencyException)

@@ -1,7 +1,9 @@
-﻿@using PresentationLayer
+﻿@using Microsoft.AspNetCore.Identity
+@using PresentationLayer
 @using PresentationLayer.Models
 @using EntityLayer.Concrete
 @using EntityLayer.Enums
 @using EntityLayer.DTOs.User
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @addTagHelper *, Sandal
+@inject UserManager<User> userManager

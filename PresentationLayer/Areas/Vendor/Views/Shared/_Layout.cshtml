@@ -98,7 +98,7 @@
             <div id="user-data">
                 <img src="/public/Images/ProfilePictures/Yagmur_Novruzov.jpg"
                      alt="" />
-                <p>Yagmur N.</p>
+                <p>@(userManager.GetUserAsync(Context.User).Result.FirstName)</p>
                 <i class="fas fa-chevron-down"></i>
             </div>
         </div>
