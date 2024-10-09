@@ -91,7 +91,6 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")

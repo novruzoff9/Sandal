@@ -3441,6 +3441,154 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\upload\\products\\117130c0-4e1c-40a0-8984-973b66b11019_PS3.jpg",
+      "PackagePath": "staticwebassets\\upload\\products\\117130c0-4e1c-40a0-8984-973b66b11019_PS3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\upload\\products\\4d8e292b-4742-420c-8d12-2856f7d09201_download.png",
+      "PackagePath": "staticwebassets\\upload\\products\\4d8e292b-4742-420c-8d12-2856f7d09201_download.png"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\upload\\products\\650ce5ef-afb7-4f24-81c3-7e636f8a0bfb_Xbox X.png",
+      "PackagePath": "staticwebassets\\upload\\products\\650ce5ef-afb7-4f24-81c3-7e636f8a0bfb_Xbox X.png"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\upload\\products\\80e39b15-758c-4532-a367-f087ef821a76_1984_George_orwell.jpg",
+      "PackagePath": "staticwebassets\\upload\\products\\80e39b15-758c-4532-a367-f087ef821a76_1984_George_orwell.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\upload\\products\\b3052fcc-b165-4466-a25d-e22465aaf25d_guitar.jpg",
+      "PackagePath": "staticwebassets\\upload\\products\\b3052fcc-b165-4466-a25d-e22465aaf25d_guitar.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\upload\\products\\b5578cbf-4d62-4a6c-989e-7f0972eca026_Cinayət-və-cəza.png",
+      "PackagePath": "staticwebassets\\upload\\products\\b5578cbf-4d62-4a6c-989e-7f0972eca026_Cinayət-və-cəza.png"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\upload\\products\\d47a9edc-9a3d-4d6c-a065-d9acd5c95aea_download.png",
+      "PackagePath": "staticwebassets\\upload\\products\\d47a9edc-9a3d-4d6c-a065-d9acd5c95aea_download.png"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\css\\StyleSheet1.css",
+      "PackagePath": "staticwebassets\\vendor\\assets\\css\\StyleSheet1.css"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\css\\sass\\AdminPanel.css",
+      "PackagePath": "staticwebassets\\vendor\\assets\\css\\sass\\AdminPanel.css"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\css\\sass\\AdminPanel.css.map",
+      "PackagePath": "staticwebassets\\vendor\\assets\\css\\sass\\AdminPanel.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\css\\sass\\AdminPanel.scss",
+      "PackagePath": "staticwebassets\\vendor\\assets\\css\\sass\\AdminPanel.scss"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\css\\sass\\dashboard.css",
+      "PackagePath": "staticwebassets\\vendor\\assets\\css\\sass\\dashboard.css"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\css\\sass\\dashboard.css.map",
+      "PackagePath": "staticwebassets\\vendor\\assets\\css\\sass\\dashboard.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\css\\sass\\dashboard.scss",
+      "PackagePath": "staticwebassets\\vendor\\assets\\css\\sass\\dashboard.scss"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\css\\sass\\partials\\_basics.scss",
+      "PackagePath": "staticwebassets\\vendor\\assets\\css\\sass\\partials\\_basics.scss"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\css\\sass\\partials\\_variables.scss",
+      "PackagePath": "staticwebassets\\vendor\\assets\\css\\sass\\partials\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\css\\sass\\partials\\sections\\_aside.scss",
+      "PackagePath": "staticwebassets\\vendor\\assets\\css\\sass\\partials\\sections\\_aside.scss"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\css\\sass\\partials\\sections\\_content.scss",
+      "PackagePath": "staticwebassets\\vendor\\assets\\css\\sass\\partials\\sections\\_content.scss"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\css\\sass\\partials\\sections\\_header.scss",
+      "PackagePath": "staticwebassets\\vendor\\assets\\css\\sass\\partials\\sections\\_header.scss"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\css\\sass\\partials\\sections\\_table.scss",
+      "PackagePath": "staticwebassets\\vendor\\assets\\css\\sass\\partials\\sections\\_table.scss"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\img\\Categories\\Design.jpg",
+      "PackagePath": "staticwebassets\\vendor\\assets\\img\\Categories\\Design.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\img\\Categories\\Language.jpg",
+      "PackagePath": "staticwebassets\\vendor\\assets\\img\\Categories\\Language.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\img\\Categories\\Marketing.jpg",
+      "PackagePath": "staticwebassets\\vendor\\assets\\img\\Categories\\Marketing.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\img\\Categories\\Prograaming.jpg",
+      "PackagePath": "staticwebassets\\vendor\\assets\\img\\Categories\\Prograaming.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\img\\Categories\\Self_Development.jpg",
+      "PackagePath": "staticwebassets\\vendor\\assets\\img\\Categories\\Self_Development.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\img\\Courses\\Evolution-of-Coding-scaled.jpg",
+      "PackagePath": "staticwebassets\\vendor\\assets\\img\\Courses\\Evolution-of-Coding-scaled.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\img\\Courses\\German-Language-Course-for-Beginners.jpg",
+      "PackagePath": "staticwebassets\\vendor\\assets\\img\\Courses\\German-Language-Course-for-Beginners.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\img\\Courses\\Graphic-Design-BCG-Banner.png",
+      "PackagePath": "staticwebassets\\vendor\\assets\\img\\Courses\\Graphic-Design-BCG-Banner.png"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\img\\Courses\\Importance-of-Psychology_UDC.jpg",
+      "PackagePath": "staticwebassets\\vendor\\assets\\img\\Courses\\Importance-of-Psychology_UDC.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\img\\Courses\\bitcoin.jpeg",
+      "PackagePath": "staticwebassets\\vendor\\assets\\img\\Courses\\bitcoin.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\img\\Courses\\english-language.jpeg",
+      "PackagePath": "staticwebassets\\vendor\\assets\\img\\Courses\\english-language.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\img\\Flag.png",
+      "PackagePath": "staticwebassets\\vendor\\assets\\img\\Flag.png"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\img\\Logo.png",
+      "PackagePath": "staticwebassets\\vendor\\assets\\img\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\js\\Layout.js",
+      "PackagePath": "staticwebassets\\vendor\\assets\\js\\Layout.js"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\js\\Scroll.js",
+      "PackagePath": "staticwebassets\\vendor\\assets\\js\\Scroll.js"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\js\\Slider.js",
+      "PackagePath": "staticwebassets\\vendor\\assets\\js\\Slider.js"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\wwwroot\\vendor\\assets\\js\\Table.js",
+      "PackagePath": "staticwebassets\\vendor\\assets\\js\\Table.js"
+    },
+    {
       "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.PresentationLayer.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

@@ -226,7 +226,6 @@
     function owlCarouselConfig() {
         var target = $('.owl-slider');
         const rtl= $('html').attr('dir') === 'rtl' ? true: false;
-        console.log(rtl);
         if (target.length > 0) {
             target.each(function() {
                 var el = $(this),

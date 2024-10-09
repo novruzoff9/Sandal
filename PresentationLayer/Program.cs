@@ -20,7 +20,7 @@ public class Program
         builder.Services.AddControllersWithViews();
 
         builder.Services.AddDbContext<SandalContext>(options =>
-            options.UseSqlServer(builder.Configuration.GetConnectionString("HomePC") ?? throw new InvalidOperationException("Connection string 'HomePC' not found.")));
+            options.UseSqlServer(builder.Configuration.GetConnectionString("Hosting") ?? throw new InvalidOperationException("Connection string 'Hosting' not found.")));
 
         builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
         builder.Services.AddScoped<ICategoryService, CategoryService>();

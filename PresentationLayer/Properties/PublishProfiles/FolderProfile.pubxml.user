@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>D:\Visual Studio Code fayllar\Natevan Agayeva\public</_PublishTargetUrl>
-    <History>True|2024-08-23T15:48:16.6796383Z||;True|2024-08-23T19:41:47.3590180+04:00||;</History>
+    <_PublishTargetUrl>C:\Users\Novruzoff\Desktop\SandalPublish</_PublishTargetUrl>
+    <History>True|2024-10-09T16:22:16.7354908Z||;True|2024-08-23T19:48:16.6796383+04:00||;True|2024-08-23T19:41:47.3590180+04:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

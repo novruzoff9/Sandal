@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\novruzoff\\source\\repos\\sandal\\presentationlayer\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\novruzoff\\source\\repos\\sandal\\presentationlayer\\properties\\publishprofiles\\folderprofile.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\properties\\publishprofiles\\folderprofile.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\novruzoff\\source\\repos\\sandal\\presentationlayer\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\novruzoff\\source\\repos\\sandal\\presentationlayer\\properties\\publishprofiles\\folderprofile1.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\properties\\publishprofiles\\folderprofile1.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\novruzoff\\source\\repos\\sandal\\presentationlayer\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1179A0E9-B21D-4442-8C8B-B0646AAC6E20}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,27 +31,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Views\\Shop\\Index.cshtml",
-              "RelativeDocumentMoniker": "PresentationLayer\\Views\\Shop\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Views\\Shop\\Index.cshtml",
-              "RelativeToolTip": "PresentationLayer\\Views\\Shop\\Index.cshtml",
-              "ViewState": "AQIAAF0CAAAAAAAAAAAiwHMCAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-19T07:37:03.862Z",
+              "Title": "FolderProfile.pubxml",
+              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Properties\\PublishProfiles\\FolderProfile.pubxml",
+              "RelativeDocumentMoniker": "PresentationLayer\\Properties\\PublishProfiles\\FolderProfile.pubxml",
+              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Properties\\PublishProfiles\\FolderProfile.pubxml",
+              "RelativeToolTip": "PresentationLayer\\Properties\\PublishProfiles\\FolderProfile.pubxml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-10-09T16:39:50.23Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ShopController.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Controllers\\ShopController.cs",
-              "RelativeDocumentMoniker": "PresentationLayer\\Controllers\\ShopController.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Controllers\\ShopController.cs",
-              "RelativeToolTip": "PresentationLayer\\Controllers\\ShopController.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAowB8AAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T07:37:00.125Z",
+              "Title": "FolderProfile1.pubxml",
+              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Properties\\PublishProfiles\\FolderProfile1.pubxml",
+              "RelativeDocumentMoniker": "PresentationLayer\\Properties\\PublishProfiles\\FolderProfile1.pubxml",
+              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Properties\\PublishProfiles\\FolderProfile1.pubxml",
+              "RelativeToolTip": "PresentationLayer\\Properties\\PublishProfiles\\FolderProfile1.pubxml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-10-09T16:39:36.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "PresentationLayer\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\Sandal\\PresentationLayer\\Properties\\launchSettings.json",
+              "RelativeToolTip": "PresentationLayer\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-09T16:39:16.678Z",
               "EditorCaption": ""
             }
           ]
